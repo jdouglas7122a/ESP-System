@@ -10,9 +10,9 @@ namespace DataEntryTestApp
     {
         private string name { get; } // the name of the item
         private float buyPrice { get; } // wholesale price of item
-        private float salePrice { get; } // price the item is sold for
+        public float salePrice { get; } // price the item is sold for
 
-        //constructor
+        //copy constructor
         public Item(string _name, float _buyPrice, float _salePrice)
         {
             name = _name;

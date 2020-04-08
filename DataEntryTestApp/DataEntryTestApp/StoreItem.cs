@@ -12,12 +12,11 @@ namespace DataEntryTestApp
         private int stock { get; set; } // the number at the beginning of the event
         private int sold { get; set; } 
 
-        //constructor
-        public StoreItem( Item _item, int _stock, int _sold)
+        //copy constructor
+        public StoreItem( Item _item, int _stock)
         {
             item = _item;
             stock = _stock;
-            sold = _sold;
         }
 
         //returns the number of the item remaining after sales

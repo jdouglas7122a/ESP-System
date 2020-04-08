@@ -13,11 +13,10 @@ namespace DataEntryTestApp
         public float salesTotal { get; set; }
 
         //constructor
-        public Staff(string _name, float _pay, float _salesTotal)
+        public Staff(string _name, float _pay)
         {
             name = _name;
             pay = _pay;
-            salesTotal = _salesTotal;
         }
     }
 }
