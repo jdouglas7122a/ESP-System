@@ -46,39 +46,126 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Event.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ClientObjects\Event.cs" />
+    <Compile Include="Forms\Creation\EventInitializer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Forms\Creation\EventInitializer.Designer.cs">
+      <DependentUpon>EventInitializer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Viewing\EmployeeViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Viewing\EmployeeViewer.Designer.cs">
+      <DependentUpon>EmployeeViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Viewing\EventViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Viewing\EventViewer.Designer.cs">
+      <DependentUpon>EventViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestingConnection\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestingConnection\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GetForm.cs">
+    <Compile Include="Forms\TestingConnection\GetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GetForm.Designer.cs">
+    <Compile Include="Forms\TestingConnection\GetForm.Designer.cs">
       <DependentUpon>GetForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Item.cs" />
-    <Compile Include="PostForm.cs">
+    <Compile Include="ClientObjects\Item.cs" />
+    <Compile Include="Forms\Start\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PostForm.Designer.cs">
+    <Compile Include="Forms\Start\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Start\ModeSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Start\ModeSelection.Designer.cs">
+      <DependentUpon>ModeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestingConnection\PostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestingConnection\PostForm.Designer.cs">
       <DependentUpon>PostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Viewing\ItemViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Viewing\ItemViewer.Designer.cs">
+      <DependentUpon>ItemViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Viewing\ManagerViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Viewing\ManagerViewer.Designer.cs">
+      <DependentUpon>ManagerViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemInitializer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemInitializer.Designer.cs">
+      <DependentUpon>ItemInitializer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Staff.cs" />
-    <Compile Include="Store.cs" />
-    <Compile Include="StoreItem.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="ClientObjects\Staff.cs" />
+    <Compile Include="ClientObjects\Store.cs" />
+    <Compile Include="ClientObjects\StoreItem.cs" />
+    <Compile Include="Forms\Viewing\StoreViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Viewing\StoreViewer.Designer.cs">
+      <DependentUpon>StoreViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Creation\StoreInitialize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Creation\StoreInitialize.Designer.cs">
+      <DependentUpon>StoreInitialize.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Creation\EventInitializer.resx">
+      <DependentUpon>EventInitializer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Viewing\EmployeeViewer.resx">
+      <DependentUpon>EmployeeViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Viewing\EventViewer.resx">
+      <DependentUpon>EventViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestingConnection\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GetForm.resx">
+    <EmbeddedResource Include="Forms\TestingConnection\GetForm.resx">
       <DependentUpon>GetForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PostForm.resx">
+    <EmbeddedResource Include="Forms\Start\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Start\ModeSelection.resx">
+      <DependentUpon>ModeSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestingConnection\PostForm.resx">
       <DependentUpon>PostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Viewing\StoreViewer.resx">
+      <DependentUpon>StoreViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Viewing\ItemViewer.resx">
+      <DependentUpon>ItemViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Viewing\ManagerViewer.resx">
+      <DependentUpon>ManagerViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemInitializer.resx">
+      <DependentUpon>ItemInitializer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +176,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Creation\StoreInitialize.resx">
+      <DependentUpon>StoreInitialize.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

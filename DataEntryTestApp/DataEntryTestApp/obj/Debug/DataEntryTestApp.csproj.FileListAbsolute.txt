@@ -30,4 +30,9 @@ D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\Da
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csproj.GenerateResource.cache
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.exe
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.pdb
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EventViewer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.LoginForm.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.ModeSelection.resources
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csprojAssemblyReference.cache
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EmployeeViewer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.StoreViewer.resources
