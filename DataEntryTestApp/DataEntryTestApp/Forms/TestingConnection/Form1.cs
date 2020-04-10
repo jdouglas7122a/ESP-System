@@ -4,8 +4,6 @@ using System.Collections.Generic;
 
 namespace DataEntryTestApp
 {
-
-
     public partial class Form1 : Form
     {
         // coordinates for window moving
@@ -121,59 +119,5 @@ namespace DataEntryTestApp
             TextDisplay2.Text = tempText;
         }
 
-        private void TextDisplay_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormHeader_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextDisplay2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

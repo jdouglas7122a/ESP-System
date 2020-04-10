@@ -43,7 +43,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.GetButton = new System.Windows.Forms.Button();
             this.PostButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LoginSubmitButton = new System.Windows.Forms.Button();
             this.FormHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +79,7 @@
             this.FormLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormLabel.Location = new System.Drawing.Point(12, 20);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(162, 13);
+            this.FormLabel.Size = new System.Drawing.Size(215, 17);
             this.FormLabel.TabIndex = 3;
             this.FormLabel.Text = "Test Form For ODBC Connection";
             // 
@@ -102,8 +102,7 @@
             this.TextDisplay2.Cursor = System.Windows.Forms.Cursors.No;
             this.TextDisplay2.Location = new System.Drawing.Point(166, 106);
             this.TextDisplay2.Name = "TextDisplay2";
-            this.TextDisplay2.ReadOnly = true;
-            this.TextDisplay2.Size = new System.Drawing.Size(621, 20);
+            this.TextDisplay2.Size = new System.Drawing.Size(621, 22);
             this.TextDisplay2.TabIndex = 15;
             // 
             // TextDisplay
@@ -111,8 +110,7 @@
             this.TextDisplay.Cursor = System.Windows.Forms.Cursors.No;
             this.TextDisplay.Location = new System.Drawing.Point(167, 63);
             this.TextDisplay.Name = "TextDisplay";
-            this.TextDisplay.ReadOnly = true;
-            this.TextDisplay.Size = new System.Drawing.Size(621, 20);
+            this.TextDisplay.Size = new System.Drawing.Size(621, 22);
             this.TextDisplay.TabIndex = 13;
             // 
             // button10
@@ -238,25 +236,26 @@
             this.PostButton.Text = "Username:";
             this.PostButton.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // LoginSubmitButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(637, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 45);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.LoginSubmitButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.LoginSubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginSubmitButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LoginSubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginSubmitButton.Location = new System.Drawing.Point(637, 403);
+            this.LoginSubmitButton.Name = "LoginSubmitButton";
+            this.LoginSubmitButton.Size = new System.Drawing.Size(160, 45);
+            this.LoginSubmitButton.TabIndex = 24;
+            this.LoginSubmitButton.Text = "Submit";
+            this.LoginSubmitButton.UseVisualStyleBackColor = false;
+            this.LoginSubmitButton.Click += new System.EventHandler(this.LoginSubmitButton_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LoginSubmitButton);
             this.Controls.Add(this.FormHeader);
             this.Controls.Add(this.TextDisplay2);
             this.Controls.Add(this.TextDisplay);
@@ -296,6 +295,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button GetButton;
         private System.Windows.Forms.Button PostButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LoginSubmitButton;
     }
 }

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataEntryTestApp"
+    "\\DataEntryTestApp",
+    "\\DataEntryTestApp\\Forms"
   ],
   "SelectedNode": "\\DataEntryTestApp.sln",
   "PreviewInSolutionExplorer": false

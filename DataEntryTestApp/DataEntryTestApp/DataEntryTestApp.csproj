@@ -108,10 +108,10 @@
     <Compile Include="Forms\Viewing\ManagerViewer.Designer.cs">
       <DependentUpon>ManagerViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemInitializer.cs">
+    <Compile Include="Forms\Creation\ItemInitializer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ItemInitializer.Designer.cs">
+    <Compile Include="Forms\Creation\ItemInitializer.Designer.cs">
       <DependentUpon>ItemInitializer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -164,7 +164,7 @@
     <EmbeddedResource Include="Forms\Viewing\ManagerViewer.resx">
       <DependentUpon>ManagerViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemInitializer.resx">
+    <EmbeddedResource Include="Forms\Creation\ItemInitializer.resx">
       <DependentUpon>ItemInitializer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

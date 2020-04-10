@@ -21,5 +21,13 @@ namespace DataEntryTestApp
         {
             //submit login info to server
         }
+
+        private void LoginSubmitButton_Click(object sender, EventArgs e)
+        {
+            if(true /*server confirms loggin details */)
+            {
+
+            }
+        }
     }
 }

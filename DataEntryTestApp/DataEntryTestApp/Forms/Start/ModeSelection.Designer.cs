@@ -41,6 +41,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.GetButton = new System.Windows.Forms.Button();
             this.PostButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.FormHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,8 +56,9 @@
             this.FormHeader.Controls.Add(this.ExitButton);
             this.FormHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.FormHeader.Location = new System.Drawing.Point(0, 0);
+            this.FormHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FormHeader.Name = "FormHeader";
-            this.FormHeader.Size = new System.Drawing.Size(800, 50);
+            this.FormHeader.Size = new System.Drawing.Size(1067, 62);
             this.FormHeader.TabIndex = 25;
             // 
             // MinimizeButton
@@ -63,9 +68,10 @@
             this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MinimizeButton.Font = new System.Drawing.Font("Marlett", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimizeButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.MinimizeButton.Location = new System.Drawing.Point(701, 3);
+            this.MinimizeButton.Location = new System.Drawing.Point(935, 4);
+            this.MinimizeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MinimizeButton.Name = "MinimizeButton";
-            this.MinimizeButton.Size = new System.Drawing.Size(45, 42);
+            this.MinimizeButton.Size = new System.Drawing.Size(60, 52);
             this.MinimizeButton.TabIndex = 4;
             this.MinimizeButton.Text = "_";
             this.MinimizeButton.UseVisualStyleBackColor = true;
@@ -74,9 +80,10 @@
             // 
             this.FormLabel.AutoSize = true;
             this.FormLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormLabel.Location = new System.Drawing.Point(12, 20);
+            this.FormLabel.Location = new System.Drawing.Point(16, 25);
+            this.FormLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(162, 13);
+            this.FormLabel.Size = new System.Drawing.Size(215, 17);
             this.FormLabel.TabIndex = 3;
             this.FormLabel.Text = "Test Form For ODBC Connection";
             // 
@@ -87,9 +94,10 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ExitButton.Location = new System.Drawing.Point(752, 3);
+            this.ExitButton.Location = new System.Drawing.Point(1003, 4);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(45, 42);
+            this.ExitButton.Size = new System.Drawing.Size(60, 52);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "X";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -100,9 +108,10 @@
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(1, 404);
+            this.button10.Location = new System.Drawing.Point(1, 497);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(160, 45);
+            this.button10.Size = new System.Drawing.Size(213, 55);
             this.button10.TabIndex = 36;
             this.button10.Text = "--";
             this.button10.UseVisualStyleBackColor = false;
@@ -113,9 +122,10 @@
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(1, 360);
+            this.button6.Location = new System.Drawing.Point(1, 443);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(160, 45);
+            this.button6.Size = new System.Drawing.Size(213, 55);
             this.button6.TabIndex = 35;
             this.button6.Text = "--";
             this.button6.UseVisualStyleBackColor = false;
@@ -126,9 +136,10 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(1, 315);
+            this.button7.Location = new System.Drawing.Point(1, 388);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(160, 45);
+            this.button7.Size = new System.Drawing.Size(213, 55);
             this.button7.TabIndex = 34;
             this.button7.Text = "--";
             this.button7.UseVisualStyleBackColor = false;
@@ -139,9 +150,10 @@
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(1, 270);
+            this.button8.Location = new System.Drawing.Point(1, 332);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(160, 45);
+            this.button8.Size = new System.Drawing.Size(213, 55);
             this.button8.TabIndex = 33;
             this.button8.Text = "--";
             this.button8.UseVisualStyleBackColor = false;
@@ -152,9 +164,10 @@
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(1, 228);
+            this.button9.Location = new System.Drawing.Point(1, 281);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(160, 45);
+            this.button9.Size = new System.Drawing.Size(213, 55);
             this.button9.TabIndex = 32;
             this.button9.Text = "--";
             this.button9.UseVisualStyleBackColor = false;
@@ -165,9 +178,10 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(1, 184);
+            this.button5.Location = new System.Drawing.Point(1, 226);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(160, 45);
+            this.button5.Size = new System.Drawing.Size(213, 55);
             this.button5.TabIndex = 31;
             this.button5.Text = "--";
             this.button5.UseVisualStyleBackColor = false;
@@ -178,9 +192,10 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(1, 139);
+            this.button4.Location = new System.Drawing.Point(1, 171);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 45);
+            this.button4.Size = new System.Drawing.Size(213, 55);
             this.button4.TabIndex = 30;
             this.button4.Text = "--";
             this.button4.UseVisualStyleBackColor = false;
@@ -194,9 +209,10 @@
             this.GetButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
             this.GetButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.GetButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.GetButton.Location = new System.Drawing.Point(1, 94);
+            this.GetButton.Location = new System.Drawing.Point(1, 116);
+            this.GetButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GetButton.Name = "GetButton";
-            this.GetButton.Size = new System.Drawing.Size(160, 45);
+            this.GetButton.Size = new System.Drawing.Size(213, 55);
             this.GetButton.TabIndex = 29;
             this.GetButton.Text = "New Event";
             this.GetButton.UseVisualStyleBackColor = false;
@@ -210,18 +226,55 @@
             this.PostButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PostButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.PostButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.PostButton.Location = new System.Drawing.Point(1, 52);
+            this.PostButton.Location = new System.Drawing.Point(1, 64);
+            this.PostButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PostButton.Name = "PostButton";
-            this.PostButton.Size = new System.Drawing.Size(160, 45);
+            this.PostButton.Size = new System.Drawing.Size(213, 55);
             this.PostButton.TabIndex = 27;
             this.PostButton.Text = "Select Event";
             this.PostButton.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(294, 116);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(274, 382);
+            this.panel1.TabIndex = 37;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(710, 116);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(274, 382);
+            this.panel2.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(735, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 17);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "New Event:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(320, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 17);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Event Select:";
+            // 
             // ModeSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.FormHeader);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button6);
@@ -233,11 +286,13 @@
             this.Controls.Add(this.GetButton);
             this.Controls.Add(this.PostButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ModeSelection";
             this.Text = "ModeSelection";
             this.FormHeader.ResumeLayout(false);
             this.FormHeader.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -256,5 +311,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button GetButton;
         private System.Windows.Forms.Button PostButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
