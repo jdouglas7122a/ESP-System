@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataEntryTestApp
 {
-    class Event
+    public class Event
     {
         public string eventName;
         public List<Store> stores;
@@ -28,6 +28,27 @@ namespace DataEntryTestApp
             stores = new List<Store>();
             staffMembers = new List<Staff>();
             eventItems = new List<Item>();
+        }
+
+        public float GetEventProfit()
+        {
+            float profit = 0;
+            foreach (Store foo in stores)
+            {
+                profit += foo.GetProfit();
+            }
+            return profit;
+        }
+
+        //gets the ammount of money spent on the entire inventory of the event
+        public float GetEventInvestment()
+        {
+            float cost = 0;
+            foreach(Store foo in stores)
+            {
+                cost += foo.GetInvestmentOnInventory();
+            }
+            return cost;
         }
     }
 }

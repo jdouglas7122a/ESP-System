@@ -33,6 +33,11 @@ D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\Da
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EventViewer.resources
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.LoginForm.resources
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.ModeSelection.resources
-D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csprojAssemblyReference.cache
-D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EmployeeViewer.resources
 D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.StoreViewer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EmployeeInitializer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EventInitializer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.ItemViewer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.ManagerViewer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.StoreInitialize.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.Forms.Creation.ItemInitializer.resources
+D:\softwareEngineering\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.Form.resources

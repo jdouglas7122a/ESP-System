@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataEntryTestApp
 {
-    class StoreItem
+    public class StoreItem
     {
-        private Item item { get; set; } 
-        private int stock { get; set; } // the number at the beginning of the event
-        private int sold { get; set; } 
+        public Item item { get; set; } 
+        public int stock { get; set; } // the number at the beginning of the event
+        public int sold { get; set; } 
 
         //copy constructor
         public StoreItem( Item _item, int _stock)
@@ -19,10 +19,27 @@ namespace DataEntryTestApp
             stock = _stock;
         }
 
+        //full Data Constructor
+        public StoreItem(Item _item, int _stock, int _sold)
+        {
+            item = _item;
+            stock = _stock;
+            sold = _sold;
+        }
+
         //returns the number of the item remaining after sales
         public float ItemsRemaining()
         {
             return (float)(stock - sold);
+        }
+
+        //gets the proffit of the inventory item
+        public float GetProfitOfItem()
+        {
+            int unsold = stock - sold;
+            float profit = item.proffitPerUnit * sold;
+            profit -= item.buyPrice * unsold;
+            return profit;
         }
     }
 }

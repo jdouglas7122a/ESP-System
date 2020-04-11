@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DataEntryTestApp
 {
-    public partial class EventInitializer : Form
+    public partial class EventInitializer : System.Windows.Forms.Form
     {
         public EventInitializer()
         {
             InitializeComponent();
+        }
+
+        private void EventInitializer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

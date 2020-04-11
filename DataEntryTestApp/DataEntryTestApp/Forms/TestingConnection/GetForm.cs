@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DataEntryTestApp
 {
-    public partial class GetForm : Form
+    public partial class GetForm : System.Windows.Forms.Form
     {
         // coordinates for window moving
         int originFormX = 0;

@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.FormHeader = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.MinimizeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.ManagersViewerButton = new System.Windows.Forms.Button();
+            this.ItemViewerButton = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.GetButton = new System.Windows.Forms.Button();
-            this.PostButton = new System.Windows.Forms.Button();
+            this.EmployeeViewerButton = new System.Windows.Forms.Button();
+            this.StoresViewerButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,9 +53,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.StoreViewerButton = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
+            this.ViewerBackButton = new System.Windows.Forms.Button();
             this.FormHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,28 +64,32 @@
             // FormHeader
             // 
             this.FormHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.FormHeader.Controls.Add(this.button1);
+            this.FormHeader.Controls.Add(this.MinimizeButton);
             this.FormHeader.Controls.Add(this.label1);
-            this.FormHeader.Controls.Add(this.button2);
+            this.FormHeader.Controls.Add(this.ExitButton);
             this.FormHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.FormHeader.Location = new System.Drawing.Point(0, 0);
             this.FormHeader.Name = "FormHeader";
             this.FormHeader.Size = new System.Drawing.Size(800, 50);
             this.FormHeader.TabIndex = 69;
+            this.FormHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormHeader_MouseDown);
+            this.FormHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormHeader_MouseMove);
+            this.FormHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormHeader_MouseUp);
             // 
-            // button1
+            // MinimizeButton
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Marlett", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button1.Location = new System.Drawing.Point(701, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 42);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "_";
-            this.button1.UseVisualStyleBackColor = true;
+            this.MinimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimizeButton.FlatAppearance.BorderSize = 0;
+            this.MinimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MinimizeButton.Font = new System.Drawing.Font("Marlett", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MinimizeButton.Location = new System.Drawing.Point(701, 3);
+            this.MinimizeButton.Name = "MinimizeButton";
+            this.MinimizeButton.Size = new System.Drawing.Size(45, 42);
+            this.MinimizeButton.TabIndex = 4;
+            this.MinimizeButton.Text = "_";
+            this.MinimizeButton.UseVisualStyleBackColor = true;
+            this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
             // label1
             // 
@@ -97,64 +101,53 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Test Form For ODBC Connection";
             // 
-            // button2
+            // ExitButton
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Location = new System.Drawing.Point(752, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 42);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ExitButton.Location = new System.Drawing.Point(752, 3);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(45, 42);
+            this.ExitButton.TabIndex = 3;
+            this.ExitButton.Text = "X";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // button4
+            // ManagersViewerButton
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button4.Location = new System.Drawing.Point(2, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(160, 45);
-            this.button4.TabIndex = 71;
-            this.button4.Text = "Managers";
-            this.button4.UseVisualStyleBackColor = false;
+            this.ManagersViewerButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ManagersViewerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ManagersViewerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ManagersViewerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ManagersViewerButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
+            this.ManagersViewerButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ManagersViewerButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.ManagersViewerButton.Location = new System.Drawing.Point(2, 184);
+            this.ManagersViewerButton.Name = "ManagersViewerButton";
+            this.ManagersViewerButton.Size = new System.Drawing.Size(160, 45);
+            this.ManagersViewerButton.TabIndex = 71;
+            this.ManagersViewerButton.Text = "Managers";
+            this.ManagersViewerButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // ItemViewerButton
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button3.Location = new System.Drawing.Point(2, 139);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 45);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "Items";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(2, 405);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(160, 45);
-            this.button10.TabIndex = 68;
-            this.button10.Text = "--";
-            this.button10.UseVisualStyleBackColor = false;
+            this.ItemViewerButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ItemViewerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ItemViewerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ItemViewerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ItemViewerButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
+            this.ItemViewerButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ItemViewerButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.ItemViewerButton.Location = new System.Drawing.Point(2, 139);
+            this.ItemViewerButton.Name = "ItemViewerButton";
+            this.ItemViewerButton.Size = new System.Drawing.Size(160, 45);
+            this.ItemViewerButton.TabIndex = 70;
+            this.ItemViewerButton.Text = "Items";
+            this.ItemViewerButton.UseVisualStyleBackColor = false;
+            this.ItemViewerButton.Click += new System.EventHandler(this.ItemViewerButton_Click);
             // 
             // button6
             // 
@@ -208,36 +201,38 @@
             this.button9.Text = "--";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // GetButton
+            // EmployeeViewerButton
             // 
-            this.GetButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.GetButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GetButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.GetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GetButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
-            this.GetButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.GetButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.GetButton.Location = new System.Drawing.Point(2, 95);
-            this.GetButton.Name = "GetButton";
-            this.GetButton.Size = new System.Drawing.Size(160, 45);
-            this.GetButton.TabIndex = 63;
-            this.GetButton.Text = "Employees";
-            this.GetButton.UseVisualStyleBackColor = false;
+            this.EmployeeViewerButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.EmployeeViewerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmployeeViewerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EmployeeViewerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmployeeViewerButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
+            this.EmployeeViewerButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.EmployeeViewerButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.EmployeeViewerButton.Location = new System.Drawing.Point(2, 95);
+            this.EmployeeViewerButton.Name = "EmployeeViewerButton";
+            this.EmployeeViewerButton.Size = new System.Drawing.Size(160, 45);
+            this.EmployeeViewerButton.TabIndex = 63;
+            this.EmployeeViewerButton.Text = "Employees";
+            this.EmployeeViewerButton.UseVisualStyleBackColor = false;
+            this.EmployeeViewerButton.Click += new System.EventHandler(this.EmployeeViewerButton_Click);
             // 
-            // PostButton
+            // StoresViewerButton
             // 
-            this.PostButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.PostButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PostButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.PostButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PostButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PostButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PostButton.Location = new System.Drawing.Point(2, 53);
-            this.PostButton.Name = "PostButton";
-            this.PostButton.Size = new System.Drawing.Size(160, 45);
-            this.PostButton.TabIndex = 62;
-            this.PostButton.Text = "Stores";
-            this.PostButton.UseVisualStyleBackColor = false;
+            this.StoresViewerButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.StoresViewerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StoresViewerButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.StoresViewerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StoresViewerButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StoresViewerButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.StoresViewerButton.Location = new System.Drawing.Point(2, 53);
+            this.StoresViewerButton.Name = "StoresViewerButton";
+            this.StoresViewerButton.Size = new System.Drawing.Size(160, 45);
+            this.StoresViewerButton.TabIndex = 62;
+            this.StoresViewerButton.Text = "Stores";
+            this.StoresViewerButton.UseVisualStyleBackColor = false;
+            this.StoresViewerButton.Click += new System.EventHandler(this.StoresViewerButton_Click);
             // 
             // label2
             // 
@@ -354,13 +349,13 @@
             this.label7.TabIndex = 80;
             this.label7.Text = "Staff Managed:";
             // 
-            // panel2
+            // StoreViewerButton
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel2.Location = new System.Drawing.Point(587, 63);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(201, 376);
-            this.panel2.TabIndex = 81;
+            this.StoreViewerButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.StoreViewerButton.Location = new System.Drawing.Point(587, 63);
+            this.StoreViewerButton.Name = "StoreViewerButton";
+            this.StoreViewerButton.Size = new System.Drawing.Size(201, 376);
+            this.StoreViewerButton.TabIndex = 81;
             // 
             // panel3
             // 
@@ -379,31 +374,49 @@
             this.label9.TabIndex = 82;
             this.label9.Text = "Store Profit:";
             // 
+            // ViewerBackButton
+            // 
+            this.ViewerBackButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ViewerBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewerBackButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ViewerBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ViewerBackButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold);
+            this.ViewerBackButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ViewerBackButton.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.ViewerBackButton.Location = new System.Drawing.Point(3, 403);
+            this.ViewerBackButton.Name = "ViewerBackButton";
+            this.ViewerBackButton.Size = new System.Drawing.Size(160, 45);
+            this.ViewerBackButton.TabIndex = 83;
+            this.ViewerBackButton.Text = "Back";
+            this.ViewerBackButton.UseVisualStyleBackColor = false;
+            this.ViewerBackButton.Click += new System.EventHandler(this.ViewerBackButton_Click);
+            // 
             // ManagerViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ViewerBackButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.StoreViewerButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.FormHeader);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.ManagersViewerButton);
+            this.Controls.Add(this.ItemViewerButton);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.GetButton);
-            this.Controls.Add(this.PostButton);
+            this.Controls.Add(this.EmployeeViewerButton);
+            this.Controls.Add(this.StoresViewerButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManagerViewer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerViewer";
             this.FormHeader.ResumeLayout(false);
             this.FormHeader.PerformLayout();
@@ -417,18 +430,17 @@
         #endregion
 
         private System.Windows.Forms.Panel FormHeader;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button MinimizeButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button ManagersViewerButton;
+        private System.Windows.Forms.Button ItemViewerButton;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button GetButton;
-        private System.Windows.Forms.Button PostButton;
+        private System.Windows.Forms.Button EmployeeViewerButton;
+        private System.Windows.Forms.Button StoresViewerButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
@@ -442,8 +454,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel StoreViewerButton;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button ViewerBackButton;
     }
 }

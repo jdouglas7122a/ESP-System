@@ -10,23 +10,41 @@ using System.Windows.Forms;
 
 namespace DataEntryTestApp
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : BaseForm
     {
+        //base form behaviour
         public LoginForm()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
-            //submit login info to server
+            ExitAction();
         }
-
+        private void MinimizeButton_Click(object sender, EventArgs e)
+        {
+            MinimizeAction();
+        }
+        private void FormHeader_MouseUp(object sender, MouseEventArgs e)
+        {
+            HeaderMouseUpAction();
+        }
+        private void FormHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+           HeaderMouseDownAction();
+        }
+        private void FormHeader_MouseMove(object sender, MouseEventArgs e)
+        {
+            HeaderMouseMoveAction();
+        }
         private void LoginSubmitButton_Click(object sender, EventArgs e)
         {
-            if(true /*server confirms loggin details */)
+            if (true /*server confirms loggin details */)
             {
-
+                this.Hide();
+                ModeSelection modeForm = new ModeSelection();
+                modeForm.ShowDialog();
+                this.Close();
             }
         }
     }

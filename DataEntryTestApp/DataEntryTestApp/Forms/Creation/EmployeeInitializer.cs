@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DataEntryTestApp
 {
-    public partial class StoreInitialize : System.Windows.Forms.Form
+    public partial class EmployeeInitializer : System.Windows.Forms.Form
     {
-        public StoreInitialize()
+        public EmployeeInitializer()
         {
             InitializeComponent();
         }

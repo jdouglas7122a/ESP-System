@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataEntryTestApp
+namespace DataEntryTestApp.Forms.Creation
 {
-    public partial class ItemInitializer : Form
+    public partial class ItemInitializer : System.Windows.Forms.Form
     {
         public ItemInitializer()
         {
             InitializeComponent();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

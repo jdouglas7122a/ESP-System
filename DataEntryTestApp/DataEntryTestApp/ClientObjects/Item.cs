@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DataEntryTestApp
 {
-    class Item
+    public class Item
     {
-        private string name { get; } // the name of the item
-        private float buyPrice { get; } // wholesale price of item
-        public float salePrice { get; } // price the item is sold for
+        public string name; // the name of the item
+        public float buyPrice; // wholesale price of item
+        public float salePrice;// price the item is sold for
+        public float proffitPerUnit;
 
         //copy constructor
         public Item(string _name, float _buyPrice, float _salePrice)
@@ -18,6 +19,7 @@ namespace DataEntryTestApp
             name = _name;
             buyPrice = _buyPrice;
             salePrice = _salePrice;
+            proffitPerUnit = salePrice - buyPrice;
         }
     }
 }

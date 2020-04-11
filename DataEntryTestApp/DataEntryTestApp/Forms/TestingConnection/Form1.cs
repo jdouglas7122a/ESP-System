@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DataEntryTestApp
 {
-    public partial class Form1 : Form
+    public partial class Form1 : System.Windows.Forms.Form
     {
         // coordinates for window moving
         int originFormX = 0;

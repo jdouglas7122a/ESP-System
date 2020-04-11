@@ -58,6 +58,9 @@
             this.FormHeader.Name = "FormHeader";
             this.FormHeader.Size = new System.Drawing.Size(800, 50);
             this.FormHeader.TabIndex = 12;
+            this.FormHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormHeader_MouseDown);
+            this.FormHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormHeader_MouseMove);
+            this.FormHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FormHeader_MouseUp);
             // 
             // MinimizeButton
             // 
@@ -72,6 +75,7 @@
             this.MinimizeButton.TabIndex = 4;
             this.MinimizeButton.Text = "_";
             this.MinimizeButton.UseVisualStyleBackColor = true;
+            this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
             // FormLabel
             // 
@@ -79,7 +83,7 @@
             this.FormLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormLabel.Location = new System.Drawing.Point(12, 20);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(215, 17);
+            this.FormLabel.Size = new System.Drawing.Size(162, 13);
             this.FormLabel.TabIndex = 3;
             this.FormLabel.Text = "Test Form For ODBC Connection";
             // 
@@ -96,13 +100,14 @@
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "X";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // TextDisplay2
             // 
             this.TextDisplay2.Cursor = System.Windows.Forms.Cursors.No;
             this.TextDisplay2.Location = new System.Drawing.Point(166, 106);
             this.TextDisplay2.Name = "TextDisplay2";
-            this.TextDisplay2.Size = new System.Drawing.Size(621, 22);
+            this.TextDisplay2.Size = new System.Drawing.Size(621, 20);
             this.TextDisplay2.TabIndex = 15;
             // 
             // TextDisplay
@@ -110,7 +115,7 @@
             this.TextDisplay.Cursor = System.Windows.Forms.Cursors.No;
             this.TextDisplay.Location = new System.Drawing.Point(167, 63);
             this.TextDisplay.Name = "TextDisplay";
-            this.TextDisplay.Size = new System.Drawing.Size(621, 22);
+            this.TextDisplay.Size = new System.Drawing.Size(621, 20);
             this.TextDisplay.TabIndex = 13;
             // 
             // button10
@@ -270,6 +275,7 @@
             this.Controls.Add(this.PostButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.FormHeader.ResumeLayout(false);
             this.FormHeader.PerformLayout();

@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataEntryTestApp
 {
-    class Staff
+    public class Staff
     {
         public string name { get; }
         private float pay { get; set; } // pounds per hour
-        public float salesTotal { get; set; }
 
         //constructor
         public Staff(string _name, float _pay)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataEntryTestApp
 {
-    class Store
+    public class Store
     {
         public string storeName;
         public List<StoreItem> inventory;
@@ -55,6 +55,39 @@ namespace DataEntryTestApp
         public void AssignManager(Staff _staffMember)
         {
             manager = _staffMember;
+        }
+
+        //gets the proffit of every item in the store
+        public float GetProfit()
+        {
+            float profit = 0;
+            foreach(StoreItem foo in inventory)
+            {
+                profit += foo.GetProfitOfItem();
+            }
+            return profit;
+        }
+
+        //gets the cost of every item in the store
+        public float GetInvestmentOnInventory()
+        {
+            float cost = 0;
+            foreach(StoreItem foo in inventory)
+            {
+                cost += foo.item.buyPrice * foo.stock;
+            }
+            return cost;
+        }
+
+        //returns the number of items sold
+        public float GetItemSoldCount()
+        {
+            float count = 0;
+            foreach(StoreItem foo in inventory)
+            {
+                count += foo.sold;
+            }
+            return count;
         }
     }
 }
