@@ -22,11 +22,26 @@ namespace DataEntryTestApp
             parentReference = _temp;
             storedEvent = _eventData;
             InitializeComponent();
+            GenerateTable();
+            UpdatePageData(storedEvent.stores[1]);
+        }
+
+        //opens a store viewer with target store open
+        public StoreViewer(EventViewer _temp, Event _eventData, Store _store)
+        {
+            parentReference = _temp;
+            storedEvent = _eventData;
+            InitializeComponent();
+            GenerateTable();
+            UpdatePageData(_store);
+        }
+
+        private void GenerateTable()
+        {
             foreach (Store store in storedEvent.stores)
             {
                 StoreListBox.Items.Add(store.storeName);
             }
-            UpdatePageData(storedEvent.stores[1]);
         }
 
         private void FormHeader_MouseDown(object sender, MouseEventArgs e)
@@ -104,6 +119,7 @@ namespace DataEntryTestApp
                 }
                 _targetChart.AlignDataPointsByAxisLabel();
             }
+            _targetChart.ChartAreas[0].RecalculateAxesScale();
         }
 
         private void StoreListBox_MouseClick(object sender, MouseEventArgs e)
@@ -111,6 +127,7 @@ namespace DataEntryTestApp
             if(StoreListBox.SelectedIndex != -1)
             {
                 UpdatePageData(storedEvent.stores[StoreListBox.SelectedIndex]);
+                StoreListBox.SetSelected(StoreListBox.SelectedIndex, false);
             }
         }
 
@@ -132,6 +149,14 @@ namespace DataEntryTestApp
         private void ViewerBackButton_Click(object sender, EventArgs e)
         {
             UnhideEventViewer(parentReference);
+        }
+
+        private void StaffMemberListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(StaffMemberListBox.SelectedIndex != -1)
+            {
+                //get the target staff member
+            }
         }
     }
 }

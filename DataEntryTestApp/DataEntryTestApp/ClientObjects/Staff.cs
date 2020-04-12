@@ -9,7 +9,7 @@ namespace DataEntryTestApp
     public class Staff
     {
         public string name { get; }
-        private float pay { get; set; } // pounds per hour
+        public float pay { get; set; } // pounds per hour
 
         //constructor
         public Staff(string _name, float _pay)

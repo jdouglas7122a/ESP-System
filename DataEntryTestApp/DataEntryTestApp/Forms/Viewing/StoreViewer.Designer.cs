@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.FormHeader = new System.Windows.Forms.Panel();
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -281,6 +281,7 @@
             // 
             this.StockCostTextBox.Location = new System.Drawing.Point(85, 140);
             this.StockCostTextBox.Name = "StockCostTextBox";
+            this.StockCostTextBox.ReadOnly = true;
             this.StockCostTextBox.Size = new System.Drawing.Size(127, 20);
             this.StockCostTextBox.TabIndex = 10;
             this.StockCostTextBox.Text = "No Data";
@@ -297,6 +298,7 @@
             // 
             this.UniqueCountTextBox.Location = new System.Drawing.Point(85, 114);
             this.UniqueCountTextBox.Name = "UniqueCountTextBox";
+            this.UniqueCountTextBox.ReadOnly = true;
             this.UniqueCountTextBox.Size = new System.Drawing.Size(127, 20);
             this.UniqueCountTextBox.TabIndex = 8;
             this.UniqueCountTextBox.Text = "No Data";
@@ -314,6 +316,7 @@
             // 
             this.SoldCountTextBox.Location = new System.Drawing.Point(72, 88);
             this.SoldCountTextBox.Name = "SoldCountTextBox";
+            this.SoldCountTextBox.ReadOnly = true;
             this.SoldCountTextBox.Size = new System.Drawing.Size(140, 20);
             this.SoldCountTextBox.TabIndex = 6;
             this.SoldCountTextBox.Text = "No Data";
@@ -331,6 +334,7 @@
             // 
             this.StaffNumTextBox.Location = new System.Drawing.Point(99, 59);
             this.StaffNumTextBox.Name = "StaffNumTextBox";
+            this.StaffNumTextBox.ReadOnly = true;
             this.StaffNumTextBox.Size = new System.Drawing.Size(113, 20);
             this.StaffNumTextBox.TabIndex = 4;
             this.StaffNumTextBox.Text = "No Data";
@@ -357,6 +361,7 @@
             // 
             this.ManagerNameTextBox.Location = new System.Drawing.Point(65, 33);
             this.ManagerNameTextBox.Name = "ManagerNameTextBox";
+            this.ManagerNameTextBox.ReadOnly = true;
             this.ManagerNameTextBox.Size = new System.Drawing.Size(147, 20);
             this.ManagerNameTextBox.TabIndex = 1;
             this.ManagerNameTextBox.Text = "Manager Name";
@@ -365,6 +370,7 @@
             // 
             this.StoreNameTextBox.Location = new System.Drawing.Point(4, 4);
             this.StoreNameTextBox.Name = "StoreNameTextBox";
+            this.StoreNameTextBox.ReadOnly = true;
             this.StoreNameTextBox.Size = new System.Drawing.Size(208, 20);
             this.StoreNameTextBox.TabIndex = 0;
             this.StoreNameTextBox.Text = "Store Name";
@@ -413,6 +419,7 @@
             this.StaffMemberListBox.Name = "StaffMemberListBox";
             this.StaffMemberListBox.Size = new System.Drawing.Size(129, 173);
             this.StaffMemberListBox.TabIndex = 65;
+            this.StaffMemberListBox.SelectedIndexChanged += new System.EventHandler(this.StaffMemberListBox_SelectedIndexChanged);
             // 
             // InventoryListBox
             // 
@@ -453,17 +460,17 @@
             // 
             this.ItemProfitChart.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ItemProfitChart.BorderlineColor = System.Drawing.SystemColors.InactiveBorder;
-            chartArea2.Name = "ChartArea1";
-            this.ItemProfitChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ItemProfitChart.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.ItemProfitChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ItemProfitChart.Legends.Add(legend1);
             this.ItemProfitChart.Location = new System.Drawing.Point(3, 5);
             this.ItemProfitChart.Name = "ItemProfitChart";
             this.ItemProfitChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ItemProfitChart.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ItemProfitChart.Series.Add(series1);
             this.ItemProfitChart.Size = new System.Drawing.Size(392, 172);
             this.ItemProfitChart.TabIndex = 1;
             this.ItemProfitChart.Text = "chart1";
