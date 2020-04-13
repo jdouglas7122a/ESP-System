@@ -21,6 +21,7 @@ namespace DataEntryTestApp
         bool mouseDown;
         public string returnValue1 { get; set; }
         public string returnValue2 { get; set; }
+        public string returnValue3 { get; set; }
         public PostForm()
         {
             InitializeComponent();
@@ -56,9 +57,25 @@ namespace DataEntryTestApp
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            this.returnValue1 = TargetTableBox.Text;
-            this.returnValue2 = DataBox.Text;
+            this.returnValue1 = TableName.Text;
+            this.returnValue2 = TableColumn.Text;
+            this.returnValue3 = DataBox.Text;
             DialogResult = DialogResult.OK;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

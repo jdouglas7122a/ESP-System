@@ -15,9 +15,11 @@ namespace DataEntryTestApp
         [STAThread]
         static void Main()
         {
+            DBConnect Connect = new DBConnect();
+            Connect.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new Form1());
         }
     }
 
@@ -36,15 +38,15 @@ namespace DataEntryTestApp
         }
 
         //Initialize values
-        private void Initialize()
+        public void Initialize()
         {
             //add the server ip
-            server = "localhost";
+            server = "51.143.180.193";
             //add server name
-            database = "connectcsharptomysql";
+            database = "SoftwareEngineeringDB";
             //uid and password are the server MySQL user and pass
-            uid = "username";
-            password = "password";
+            uid = "root";
+            password = "SoftwareEngineeringGr2!";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
@@ -97,8 +99,17 @@ namespace DataEntryTestApp
         }
 
         //Insert statement
-        public void Insert()
+        public void Insert(string tableName, string column, string data)
         {
+            string query = "INSERT INTO " + tableName + " (" + column + ") VALUES (" + data + ")";
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                cmd.ExecuteNonQuery();
+
+                this.CloseConnection();
+            }
         }
 
         //Update statement
@@ -180,4 +191,7 @@ namespace DataEntryTestApp
         }
     }
 }
+//<<<<<<< HEAD
 
+//=======
+//>>>>>>> 4d8cd2bc612c8f4c5e173ba0e3a72f697af7aa64
