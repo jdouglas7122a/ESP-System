@@ -84,9 +84,11 @@ namespace DataEntryTestApp
         //opens store form using the targeted store as the open parameter
         private void StoreLabel_MouseClick(object sender, MouseEventArgs e)
         {
+            windowPosition = this.Location;
             Store foo = storedEvent.stores.First(bar => bar.storeName == StoreLabel.Text);
             StoreViewer newForm = new StoreViewer(parentReference, storedEvent, foo);
             this.Hide();
+            newForm.Location = windowPosition;
             newForm.ShowDialog();
             this.Close();
         }

@@ -156,11 +156,13 @@ namespace DataEntryTestApp
         {
             if (StaffMemberListBox.SelectedIndex != -1)
             {
+                windowPosition = this.Location;
                 Staff foo = storedEvent.staffMembers.First(bar => bar.name == StaffMemberListBox.SelectedItem.ToString());
                 if (storedEvent.CheckIsManager(foo)) // staff member is manager
                 {
                     ManagerViewer tempForm = new ManagerViewer(parentReference, storedEvent, foo);
                     this.Hide();
+                    tempForm.Location = windowPosition;
                     tempForm.ShowDialog();
                     this.Close();
                 }
@@ -168,6 +170,7 @@ namespace DataEntryTestApp
                 {
                     Form newForm = new Form(parentReference, storedEvent, foo);
                     this.Hide();
+                    newForm.Location = windowPosition;
                     newForm.ShowDialog();
                     this.Close();
                 }
@@ -177,9 +180,11 @@ namespace DataEntryTestApp
         //opens manager viewer using clicked manager as target
         private void ManagerNameTextBox_Click(object sender, EventArgs e)
         {
+            windowPosition = this.Location;
             Store foo = storedEvent.stores.First(bar => bar.manager.name == ManagerNameTextBox.Text);
             ManagerViewer newForm = new ManagerViewer(parentReference, storedEvent, foo.manager);
             this.Hide();
+            newForm.Location = windowPosition;
             newForm.ShowDialog();
             this.Close();
         }
@@ -188,10 +193,12 @@ namespace DataEntryTestApp
         {
             if (InventoryListBox.SelectedIndex != -1)
             {
+                windowPosition = this.Location;
                 Item foo = storedEvent.eventItems.First(bar => bar.name == InventoryListBox.SelectedItem.ToString());
 
                 ItemViewer tempForm = new ItemViewer(parentReference, storedEvent, foo);
                 this.Hide();
+                tempForm.Location = windowPosition;
                 tempForm.ShowDialog();
                 this.Close();
             }

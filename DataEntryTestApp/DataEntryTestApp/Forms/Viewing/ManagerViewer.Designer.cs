@@ -362,7 +362,7 @@
             this.Controls.Add(this.StoresViewerButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManagerViewer";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ManagerViewer";
             this.FormHeader.ResumeLayout(false);
             this.FormHeader.PerformLayout();

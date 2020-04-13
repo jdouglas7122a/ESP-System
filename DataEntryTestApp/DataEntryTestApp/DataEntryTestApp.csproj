@@ -144,6 +144,9 @@
     <Compile Include="Forms\Creation\StoreInitialize.Designer.cs">
       <DependentUpon>StoreInitialize.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Creation\EmployeeInitializer.resx">
       <DependentUpon>EmployeeInitializer.cs</DependentUpon>
     </EmbeddedResource>

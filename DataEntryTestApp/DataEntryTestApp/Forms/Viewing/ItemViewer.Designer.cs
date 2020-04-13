@@ -34,19 +34,19 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.StoresStockingTextBox = new System.Windows.Forms.TextBox();
-            this.UnitsSoldTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ProffitPerUnitTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.SalePriceTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.WholesalePriceTextBox = new System.Windows.Forms.TextBox();
             this.ItemNameTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.StoresStockingTextBox = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.UnitsSoldTextBox = new System.Windows.Forms.Label();
+            this.ProffitPerUnitTextBox = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.SalePriceTextBox = new System.Windows.Forms.Label();
+            this.WholesalePriceTextBox = new System.Windows.Forms.Label();
             this.FormHeader = new System.Windows.Forms.Panel();
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,24 +80,6 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // StoresStockingTextBox
-            // 
-            this.StoresStockingTextBox.Location = new System.Drawing.Point(98, 140);
-            this.StoresStockingTextBox.Name = "StoresStockingTextBox";
-            this.StoresStockingTextBox.ReadOnly = true;
-            this.StoresStockingTextBox.Size = new System.Drawing.Size(114, 20);
-            this.StoresStockingTextBox.TabIndex = 10;
-            this.StoresStockingTextBox.Text = "No Data";
-            // 
-            // UnitsSoldTextBox
-            // 
-            this.UnitsSoldTextBox.Location = new System.Drawing.Point(71, 114);
-            this.UnitsSoldTextBox.Name = "UnitsSoldTextBox";
-            this.UnitsSoldTextBox.ReadOnly = true;
-            this.UnitsSoldTextBox.Size = new System.Drawing.Size(141, 20);
-            this.UnitsSoldTextBox.TabIndex = 8;
-            this.UnitsSoldTextBox.Text = "No Data";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -107,15 +89,6 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Units Sold:";
             // 
-            // ProffitPerUnitTextBox
-            // 
-            this.ProffitPerUnitTextBox.Location = new System.Drawing.Point(88, 88);
-            this.ProffitPerUnitTextBox.Name = "ProffitPerUnitTextBox";
-            this.ProffitPerUnitTextBox.ReadOnly = true;
-            this.ProffitPerUnitTextBox.Size = new System.Drawing.Size(124, 20);
-            this.ProffitPerUnitTextBox.TabIndex = 6;
-            this.ProffitPerUnitTextBox.Text = "No Data";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -124,15 +97,6 @@
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Profit Per Unit:";
-            // 
-            // SalePriceTextBox
-            // 
-            this.SalePriceTextBox.Location = new System.Drawing.Point(71, 59);
-            this.SalePriceTextBox.Name = "SalePriceTextBox";
-            this.SalePriceTextBox.ReadOnly = true;
-            this.SalePriceTextBox.Size = new System.Drawing.Size(141, 20);
-            this.SalePriceTextBox.TabIndex = 4;
-            this.SalePriceTextBox.Text = "No Data";
             // 
             // label3
             // 
@@ -152,15 +116,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Wholesale Price:";
             // 
-            // WholesalePriceTextBox
-            // 
-            this.WholesalePriceTextBox.Location = new System.Drawing.Point(97, 33);
-            this.WholesalePriceTextBox.Name = "WholesalePriceTextBox";
-            this.WholesalePriceTextBox.ReadOnly = true;
-            this.WholesalePriceTextBox.Size = new System.Drawing.Size(115, 20);
-            this.WholesalePriceTextBox.TabIndex = 1;
-            this.WholesalePriceTextBox.Text = "No Data";
-            // 
             // ItemNameTextBox
             // 
             this.ItemNameTextBox.Location = new System.Drawing.Point(4, 4);
@@ -174,22 +129,31 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.StoresStockingTextBox);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.UnitsSoldTextBox);
-            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.ProffitPerUnitTextBox);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.SalePriceTextBox);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.WholesalePriceTextBox);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.WholesalePriceTextBox);
             this.panel2.Controls.Add(this.ItemNameTextBox);
             this.panel2.Location = new System.Drawing.Point(308, 63);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 180);
             this.panel2.TabIndex = 76;
+            // 
+            // StoresStockingTextBox
+            // 
+            this.StoresStockingTextBox.AutoSize = true;
+            this.StoresStockingTextBox.Location = new System.Drawing.Point(98, 143);
+            this.StoresStockingTextBox.Name = "StoresStockingTextBox";
+            this.StoresStockingTextBox.Size = new System.Drawing.Size(47, 13);
+            this.StoresStockingTextBox.TabIndex = 85;
+            this.StoresStockingTextBox.Text = "No Data";
             // 
             // label7
             // 
@@ -200,6 +164,24 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Stores Stocking:";
             // 
+            // UnitsSoldTextBox
+            // 
+            this.UnitsSoldTextBox.AutoSize = true;
+            this.UnitsSoldTextBox.Location = new System.Drawing.Point(71, 117);
+            this.UnitsSoldTextBox.Name = "UnitsSoldTextBox";
+            this.UnitsSoldTextBox.Size = new System.Drawing.Size(47, 13);
+            this.UnitsSoldTextBox.TabIndex = 84;
+            this.UnitsSoldTextBox.Text = "No Data";
+            // 
+            // ProffitPerUnitTextBox
+            // 
+            this.ProffitPerUnitTextBox.AutoSize = true;
+            this.ProffitPerUnitTextBox.Location = new System.Drawing.Point(88, 91);
+            this.ProffitPerUnitTextBox.Name = "ProffitPerUnitTextBox";
+            this.ProffitPerUnitTextBox.Size = new System.Drawing.Size(47, 13);
+            this.ProffitPerUnitTextBox.TabIndex = 83;
+            this.ProffitPerUnitTextBox.Text = "No Data";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -207,6 +189,24 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 9;
+            // 
+            // SalePriceTextBox
+            // 
+            this.SalePriceTextBox.AutoSize = true;
+            this.SalePriceTextBox.Location = new System.Drawing.Point(71, 62);
+            this.SalePriceTextBox.Name = "SalePriceTextBox";
+            this.SalePriceTextBox.Size = new System.Drawing.Size(47, 13);
+            this.SalePriceTextBox.TabIndex = 82;
+            this.SalePriceTextBox.Text = "No Data";
+            // 
+            // WholesalePriceTextBox
+            // 
+            this.WholesalePriceTextBox.AutoSize = true;
+            this.WholesalePriceTextBox.Location = new System.Drawing.Point(100, 36);
+            this.WholesalePriceTextBox.Name = "WholesalePriceTextBox";
+            this.WholesalePriceTextBox.Size = new System.Drawing.Size(47, 13);
+            this.WholesalePriceTextBox.TabIndex = 12;
+            this.WholesalePriceTextBox.Text = "No Data";
             // 
             // FormHeader
             // 
@@ -544,7 +544,7 @@
             this.Controls.Add(this.button8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ItemViewer";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ItemViewer";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -562,16 +562,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox StoresStockingTextBox;
-        private System.Windows.Forms.TextBox UnitsSoldTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox ProffitPerUnitTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox SalePriceTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox WholesalePriceTextBox;
         private System.Windows.Forms.TextBox ItemNameTextBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
@@ -600,5 +594,10 @@
         private System.Windows.Forms.Label ProfitLabel;
         private System.Windows.Forms.DataVisualization.Charting.Chart ItemProfitChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart SalesChart;
+        private System.Windows.Forms.Label StoresStockingTextBox;
+        private System.Windows.Forms.Label UnitsSoldTextBox;
+        private System.Windows.Forms.Label ProffitPerUnitTextBox;
+        private System.Windows.Forms.Label SalePriceTextBox;
+        private System.Windows.Forms.Label WholesalePriceTextBox;
     }
 }

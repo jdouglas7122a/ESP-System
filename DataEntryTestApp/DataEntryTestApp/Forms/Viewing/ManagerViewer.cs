@@ -142,18 +142,22 @@ namespace DataEntryTestApp
         //opens store viewer using clicked store 
         private void StoreNameTextBox_Click(object sender, EventArgs e)
         {
+            windowPosition = this.Location;
             Store foo = storedEvent.stores.First(bar => bar.storeName == StoreNameTextBox.Text);
             StoreViewer newForm = new StoreViewer(parentReference, storedEvent, foo);
             this.Hide();
+            newForm.Location = windowPosition;
             newForm.ShowDialog();
             this.Close();
         }
 
         private void EmployeeListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            windowPosition = this.Location;
             Staff foo = storedEvent.staffMembers.First(bar => bar.name == EmployeeListBox.SelectedItem.ToString());
             Form newForm = new Form(parentReference, storedEvent, foo);
             this.Hide();
+            newForm.Location = windowPosition;
             newForm.ShowDialog();
             this.Close();
         }

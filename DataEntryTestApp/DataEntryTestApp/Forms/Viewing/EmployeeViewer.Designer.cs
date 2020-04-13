@@ -42,6 +42,9 @@
             this.StoreViewerButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.StaffNameLabel = new System.Windows.Forms.Label();
+            this.SalaryLabel = new System.Windows.Forms.Label();
+            this.StoreLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,9 +52,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.BackButton = new System.Windows.Forms.Button();
             this.StaffListBox = new System.Windows.Forms.ListBox();
-            this.StoreLabel = new System.Windows.Forms.Label();
-            this.SalaryLabel = new System.Windows.Forms.Label();
-            this.StaffNameLabel = new System.Windows.Forms.Label();
             this.FormHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -252,6 +252,34 @@
             this.panel1.Size = new System.Drawing.Size(237, 123);
             this.panel1.TabIndex = 74;
             // 
+            // StaffNameLabel
+            // 
+            this.StaffNameLabel.AutoSize = true;
+            this.StaffNameLabel.Location = new System.Drawing.Point(61, 24);
+            this.StaffNameLabel.Name = "StaffNameLabel";
+            this.StaffNameLabel.Size = new System.Drawing.Size(47, 13);
+            this.StaffNameLabel.TabIndex = 16;
+            this.StaffNameLabel.Text = "No Data";
+            // 
+            // SalaryLabel
+            // 
+            this.SalaryLabel.AutoSize = true;
+            this.SalaryLabel.Location = new System.Drawing.Point(61, 55);
+            this.SalaryLabel.Name = "SalaryLabel";
+            this.SalaryLabel.Size = new System.Drawing.Size(47, 13);
+            this.SalaryLabel.TabIndex = 15;
+            this.SalaryLabel.Text = "No Data";
+            // 
+            // StoreLabel
+            // 
+            this.StoreLabel.AutoSize = true;
+            this.StoreLabel.Location = new System.Drawing.Point(61, 88);
+            this.StoreLabel.Name = "StoreLabel";
+            this.StoreLabel.Size = new System.Drawing.Size(47, 13);
+            this.StoreLabel.TabIndex = 14;
+            this.StoreLabel.Text = "No Data";
+            this.StoreLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StoreLabel_MouseClick);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -314,34 +342,6 @@
             this.StaffListBox.TabIndex = 77;
             this.StaffListBox.SelectedIndexChanged += new System.EventHandler(this.StaffListBox_SelectedIndexChanged);
             // 
-            // StoreLabel
-            // 
-            this.StoreLabel.AutoSize = true;
-            this.StoreLabel.Location = new System.Drawing.Point(61, 88);
-            this.StoreLabel.Name = "StoreLabel";
-            this.StoreLabel.Size = new System.Drawing.Size(47, 13);
-            this.StoreLabel.TabIndex = 14;
-            this.StoreLabel.Text = "No Data";
-            this.StoreLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StoreLabel_MouseClick);
-            // 
-            // SalaryLabel
-            // 
-            this.SalaryLabel.AutoSize = true;
-            this.SalaryLabel.Location = new System.Drawing.Point(61, 55);
-            this.SalaryLabel.Name = "SalaryLabel";
-            this.SalaryLabel.Size = new System.Drawing.Size(47, 13);
-            this.SalaryLabel.TabIndex = 15;
-            this.SalaryLabel.Text = "No Data";
-            // 
-            // StaffNameLabel
-            // 
-            this.StaffNameLabel.AutoSize = true;
-            this.StaffNameLabel.Location = new System.Drawing.Point(61, 24);
-            this.StaffNameLabel.Name = "StaffNameLabel";
-            this.StaffNameLabel.Size = new System.Drawing.Size(47, 13);
-            this.StaffNameLabel.TabIndex = 16;
-            this.StaffNameLabel.Text = "No Data";
-            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,7 +363,7 @@
             this.Controls.Add(this.StoreViewerButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.FormHeader.ResumeLayout(false);
             this.FormHeader.PerformLayout();
             this.panel1.ResumeLayout(false);
