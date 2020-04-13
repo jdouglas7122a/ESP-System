@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using MySql.Data.MySqlClient;
 
 namespace DataEntryTestApp
 {
@@ -14,6 +15,7 @@ namespace DataEntryTestApp
         //is window allowed to move?
         bool mouseDown;
 
+        List<string> postedTableName = new List<string>();
         List<string> postedTables = new List<string>();
         List<string> postedData = new List<string>();
         List<string> getRequest = new List<string>();
@@ -64,8 +66,9 @@ namespace DataEntryTestApp
                 switch (postWindow.ShowDialog())
                 {
                     case DialogResult.OK:
-                        postedTables.Add(postWindow.returnValue1);
-                        postedData.Add(postWindow.returnValue2);
+                        postedTableName.Add(postWindow.returnValue1);
+                        postedTables.Add(postWindow.returnValue2);
+                        postedData.Add(postWindow.returnValue3);
                         UpdatePostBox();
                         break;
                     case DialogResult.Cancel:
@@ -101,10 +104,13 @@ namespace DataEntryTestApp
         //displays all values added
         private void UpdatePostBox()
         {
+            DBConnect Connect = new DBConnect();
+            Connect.Initialize();
             string tempText = "";
             for (int i = 0; i != postedTables.Count; i++)
             {
-                tempText += "INSERT INTO " + postedTables[i] + " " + postedData[i] + "//";
+                tempText += "INSERT INTO " + postedTableName[0] + " (" + postedTables[i] + ") VALUES (" + postedData[i] + ")";
+                Connect.Insert(postedTableName[0], postedTables[i], postedData[i]);
             }
             TextDisplay.Text = tempText;
         }
@@ -119,5 +125,9 @@ namespace DataEntryTestApp
             TextDisplay2.Text = tempText;
         }
 
+        private void TextDisplay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
