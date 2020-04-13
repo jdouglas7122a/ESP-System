@@ -49,9 +49,9 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.BackButton = new System.Windows.Forms.Button();
             this.StaffListBox = new System.Windows.Forms.ListBox();
-            this.StoreLabel = new System.Windows.Forms.TextBox();
-            this.SalaryLabel = new System.Windows.Forms.TextBox();
-            this.StaffNameLabel = new System.Windows.Forms.TextBox();
+            this.StoreLabel = new System.Windows.Forms.Label();
+            this.SalaryLabel = new System.Windows.Forms.Label();
+            this.StaffNameLabel = new System.Windows.Forms.Label();
             this.FormHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -255,7 +255,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 89);
+            this.label6.Location = new System.Drawing.Point(20, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 7;
@@ -264,7 +264,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 57);
+            this.label5.Location = new System.Drawing.Point(20, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 5;
@@ -316,28 +316,31 @@
             // 
             // StoreLabel
             // 
-            this.StoreLabel.Location = new System.Drawing.Point(61, 86);
+            this.StoreLabel.AutoSize = true;
+            this.StoreLabel.Location = new System.Drawing.Point(61, 88);
             this.StoreLabel.Name = "StoreLabel";
-            this.StoreLabel.ReadOnly = true;
-            this.StoreLabel.Size = new System.Drawing.Size(159, 20);
-            this.StoreLabel.TabIndex = 11;
+            this.StoreLabel.Size = new System.Drawing.Size(47, 13);
+            this.StoreLabel.TabIndex = 14;
+            this.StoreLabel.Text = "No Data";
             this.StoreLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.StoreLabel_MouseClick);
             // 
             // SalaryLabel
             // 
-            this.SalaryLabel.Location = new System.Drawing.Point(61, 54);
+            this.SalaryLabel.AutoSize = true;
+            this.SalaryLabel.Location = new System.Drawing.Point(61, 55);
             this.SalaryLabel.Name = "SalaryLabel";
-            this.SalaryLabel.ReadOnly = true;
-            this.SalaryLabel.Size = new System.Drawing.Size(159, 20);
-            this.SalaryLabel.TabIndex = 12;
+            this.SalaryLabel.Size = new System.Drawing.Size(47, 13);
+            this.SalaryLabel.TabIndex = 15;
+            this.SalaryLabel.Text = "No Data";
             // 
             // StaffNameLabel
             // 
-            this.StaffNameLabel.Location = new System.Drawing.Point(61, 21);
+            this.StaffNameLabel.AutoSize = true;
+            this.StaffNameLabel.Location = new System.Drawing.Point(61, 24);
             this.StaffNameLabel.Name = "StaffNameLabel";
-            this.StaffNameLabel.ReadOnly = true;
-            this.StaffNameLabel.Size = new System.Drawing.Size(159, 20);
-            this.StaffNameLabel.TabIndex = 13;
+            this.StaffNameLabel.Size = new System.Drawing.Size(47, 13);
+            this.StaffNameLabel.TabIndex = 16;
+            this.StaffNameLabel.Text = "No Data";
             // 
             // Form
             // 
@@ -393,8 +396,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.ListBox StaffListBox;
-        private System.Windows.Forms.TextBox StoreLabel;
-        private System.Windows.Forms.TextBox StaffNameLabel;
-        private System.Windows.Forms.TextBox SalaryLabel;
+        private System.Windows.Forms.Label StoreLabel;
+        private System.Windows.Forms.Label StaffNameLabel;
+        private System.Windows.Forms.Label SalaryLabel;
     }
 }

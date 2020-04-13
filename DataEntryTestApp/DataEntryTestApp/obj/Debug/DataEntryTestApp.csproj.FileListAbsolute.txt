@@ -7,7 +7,6 @@ C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\bin\Debug\Bo
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\bin\Debug\Ubiety.Dns.Core.dll
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\bin\Debug\Renci.SshNet.dll
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\bin\Debug\MySql.Data.xml
-C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csprojAssemblyReference.cache
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EmployeeInitializer.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EventInitializer.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.Forms.Creation.ItemInitializer.resources
@@ -27,3 +26,4 @@ C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\Da
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csproj.CopyComplete
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.exe
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.pdb
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csprojAssemblyReference.cache

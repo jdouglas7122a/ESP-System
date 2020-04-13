@@ -42,12 +42,12 @@
             this.StoresViewerButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.StoreNameTextBox = new System.Windows.Forms.Label();
+            this.SalaryTextBox = new System.Windows.Forms.Label();
+            this.NameTextBox = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.StoreNameTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.SalaryTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.ViewerBackButton = new System.Windows.Forms.Button();
             this.ManagerListBox = new System.Windows.Forms.ListBox();
             this.EmployeeListBox = new System.Windows.Forms.ListBox();
@@ -240,16 +240,44 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.StoreNameTextBox);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.SalaryTextBox);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.NameTextBox);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(313, 160);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 156);
             this.panel1.TabIndex = 78;
+            // 
+            // StoreNameTextBox
+            // 
+            this.StoreNameTextBox.AutoSize = true;
+            this.StoreNameTextBox.Location = new System.Drawing.Point(76, 101);
+            this.StoreNameTextBox.Name = "StoreNameTextBox";
+            this.StoreNameTextBox.Size = new System.Drawing.Size(47, 13);
+            this.StoreNameTextBox.TabIndex = 89;
+            this.StoreNameTextBox.Text = "No Data";
+            this.StoreNameTextBox.Click += new System.EventHandler(this.StoreNameTextBox_Click);
+            // 
+            // SalaryTextBox
+            // 
+            this.SalaryTextBox.AutoSize = true;
+            this.SalaryTextBox.Location = new System.Drawing.Point(76, 69);
+            this.SalaryTextBox.Name = "SalaryTextBox";
+            this.SalaryTextBox.Size = new System.Drawing.Size(47, 13);
+            this.SalaryTextBox.TabIndex = 88;
+            this.SalaryTextBox.Text = "No Data";
+            // 
+            // NameTextBox
+            // 
+            this.NameTextBox.AutoSize = true;
+            this.NameTextBox.Location = new System.Drawing.Point(76, 40);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(47, 13);
+            this.NameTextBox.TabIndex = 87;
+            this.NameTextBox.Text = "No Data";
             // 
             // label6
             // 
@@ -260,14 +288,6 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Store:";
             // 
-            // StoreNameTextBox
-            // 
-            this.StoreNameTextBox.Location = new System.Drawing.Point(79, 96);
-            this.StoreNameTextBox.Name = "StoreNameTextBox";
-            this.StoreNameTextBox.ReadOnly = true;
-            this.StoreNameTextBox.Size = new System.Drawing.Size(226, 20);
-            this.StoreNameTextBox.TabIndex = 6;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -277,14 +297,6 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Salary:";
             // 
-            // SalaryTextBox
-            // 
-            this.SalaryTextBox.Location = new System.Drawing.Point(79, 65);
-            this.SalaryTextBox.Name = "SalaryTextBox";
-            this.SalaryTextBox.ReadOnly = true;
-            this.SalaryTextBox.Size = new System.Drawing.Size(226, 20);
-            this.SalaryTextBox.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -293,14 +305,6 @@
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Name:";
-            // 
-            // NameTextBox
-            // 
-            this.NameTextBox.Location = new System.Drawing.Point(79, 36);
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.ReadOnly = true;
-            this.NameTextBox.Size = new System.Drawing.Size(226, 20);
-            this.NameTextBox.TabIndex = 2;
             // 
             // ViewerBackButton
             // 
@@ -335,6 +339,7 @@
             this.EmployeeListBox.Name = "EmployeeListBox";
             this.EmployeeListBox.Size = new System.Drawing.Size(139, 381);
             this.EmployeeListBox.TabIndex = 85;
+            this.EmployeeListBox.SelectedIndexChanged += new System.EventHandler(this.EmployeeListBox_SelectedIndexChanged);
             // 
             // ManagerViewer
             // 
@@ -385,13 +390,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox StoreNameTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox SalaryTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Button ViewerBackButton;
         private System.Windows.Forms.ListBox ManagerListBox;
         private System.Windows.Forms.ListBox EmployeeListBox;
+        private System.Windows.Forms.Label StoreNameTextBox;
+        private System.Windows.Forms.Label SalaryTextBox;
+        private System.Windows.Forms.Label NameTextBox;
     }
 }

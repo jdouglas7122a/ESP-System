@@ -129,6 +129,7 @@ namespace DataEntryTestApp
             UnhideEventViewer(parentReference);
         }
 
+        //opens data on clicked manager
         private void ManagerListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ManagerListBox.SelectedIndex != -1)
@@ -136,6 +137,25 @@ namespace DataEntryTestApp
                 UpdatePageData(managers[ManagerListBox.SelectedIndex]);
                 ManagerListBox.SetSelected(ManagerListBox.SelectedIndex, false);
             }
+        }
+
+        //opens store viewer using clicked store 
+        private void StoreNameTextBox_Click(object sender, EventArgs e)
+        {
+            Store foo = storedEvent.stores.First(bar => bar.storeName == StoreNameTextBox.Text);
+            StoreViewer newForm = new StoreViewer(parentReference, storedEvent, foo);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+        }
+
+        private void EmployeeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Staff foo = storedEvent.staffMembers.First(bar => bar.name == EmployeeListBox.SelectedItem.ToString());
+            Form newForm = new Form(parentReference, storedEvent, foo);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.FormHeader = new System.Windows.Forms.Panel();
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,16 +45,11 @@
             this.StoreViewerButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.StockCostTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.UniqueCountTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.SoldCountTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.StaffNumTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ManagerNameTextBox = new System.Windows.Forms.TextBox();
             this.StoreNameTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -67,6 +62,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.ItemProfitChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ViewerBackButton = new System.Windows.Forms.Button();
+            this.ManagerNameTextBox = new System.Windows.Forms.Label();
+            this.StaffNumTextBox = new System.Windows.Forms.Label();
+            this.SoldCountTextBox = new System.Windows.Forms.Label();
+            this.StockCostTextBox = new System.Windows.Forms.Label();
+            this.UniqueCountTextBox = new System.Windows.Forms.Label();
             this.FormHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -251,17 +251,17 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.StockCostTextBox);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.UniqueCountTextBox);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.StockCostTextBox);
             this.panel2.Controls.Add(this.SoldCountTextBox);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.StaffNumTextBox);
+            this.panel2.Controls.Add(this.ManagerNameTextBox);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.ManagerNameTextBox);
             this.panel2.Controls.Add(this.StoreNameTextBox);
             this.panel2.Location = new System.Drawing.Point(308, 62);
             this.panel2.Name = "panel2";
@@ -277,15 +277,6 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Stock Cost:";
             // 
-            // StockCostTextBox
-            // 
-            this.StockCostTextBox.Location = new System.Drawing.Point(85, 140);
-            this.StockCostTextBox.Name = "StockCostTextBox";
-            this.StockCostTextBox.ReadOnly = true;
-            this.StockCostTextBox.Size = new System.Drawing.Size(127, 20);
-            this.StockCostTextBox.TabIndex = 10;
-            this.StockCostTextBox.Text = "No Data";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -293,15 +284,6 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 9;
-            // 
-            // UniqueCountTextBox
-            // 
-            this.UniqueCountTextBox.Location = new System.Drawing.Point(85, 114);
-            this.UniqueCountTextBox.Name = "UniqueCountTextBox";
-            this.UniqueCountTextBox.ReadOnly = true;
-            this.UniqueCountTextBox.Size = new System.Drawing.Size(127, 20);
-            this.UniqueCountTextBox.TabIndex = 8;
-            this.UniqueCountTextBox.Text = "No Data";
             // 
             // label5
             // 
@@ -312,15 +294,6 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Unique Items:";
             // 
-            // SoldCountTextBox
-            // 
-            this.SoldCountTextBox.Location = new System.Drawing.Point(72, 88);
-            this.SoldCountTextBox.Name = "SoldCountTextBox";
-            this.SoldCountTextBox.ReadOnly = true;
-            this.SoldCountTextBox.Size = new System.Drawing.Size(140, 20);
-            this.SoldCountTextBox.TabIndex = 6;
-            this.SoldCountTextBox.Text = "No Data";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -329,15 +302,6 @@
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Items Sold:";
-            // 
-            // StaffNumTextBox
-            // 
-            this.StaffNumTextBox.Location = new System.Drawing.Point(99, 59);
-            this.StaffNumTextBox.Name = "StaffNumTextBox";
-            this.StaffNumTextBox.ReadOnly = true;
-            this.StaffNumTextBox.Size = new System.Drawing.Size(113, 20);
-            this.StaffNumTextBox.TabIndex = 4;
-            this.StaffNumTextBox.Text = "No Data";
             // 
             // label3
             // 
@@ -356,15 +320,6 @@
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Manager:";
-            // 
-            // ManagerNameTextBox
-            // 
-            this.ManagerNameTextBox.Location = new System.Drawing.Point(65, 33);
-            this.ManagerNameTextBox.Name = "ManagerNameTextBox";
-            this.ManagerNameTextBox.ReadOnly = true;
-            this.ManagerNameTextBox.Size = new System.Drawing.Size(147, 20);
-            this.ManagerNameTextBox.TabIndex = 1;
-            this.ManagerNameTextBox.Text = "Manager Name";
             // 
             // StoreNameTextBox
             // 
@@ -428,6 +383,7 @@
             this.InventoryListBox.Name = "InventoryListBox";
             this.InventoryListBox.Size = new System.Drawing.Size(129, 173);
             this.InventoryListBox.TabIndex = 66;
+            this.InventoryListBox.SelectedIndexChanged += new System.EventHandler(this.InventoryListBox_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -460,17 +416,17 @@
             // 
             this.ItemProfitChart.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ItemProfitChart.BorderlineColor = System.Drawing.SystemColors.InactiveBorder;
-            chartArea1.Name = "ChartArea1";
-            this.ItemProfitChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ItemProfitChart.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.ItemProfitChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.ItemProfitChart.Legends.Add(legend3);
             this.ItemProfitChart.Location = new System.Drawing.Point(3, 5);
             this.ItemProfitChart.Name = "ItemProfitChart";
             this.ItemProfitChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ItemProfitChart.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.ItemProfitChart.Series.Add(series3);
             this.ItemProfitChart.Size = new System.Drawing.Size(392, 172);
             this.ItemProfitChart.TabIndex = 1;
             this.ItemProfitChart.Text = "chart1";
@@ -491,6 +447,52 @@
             this.ViewerBackButton.Text = "Back";
             this.ViewerBackButton.UseVisualStyleBackColor = false;
             this.ViewerBackButton.Click += new System.EventHandler(this.ViewerBackButton_Click);
+            // 
+            // ManagerNameTextBox
+            // 
+            this.ManagerNameTextBox.AutoSize = true;
+            this.ManagerNameTextBox.Location = new System.Drawing.Point(65, 36);
+            this.ManagerNameTextBox.Name = "ManagerNameTextBox";
+            this.ManagerNameTextBox.Size = new System.Drawing.Size(44, 13);
+            this.ManagerNameTextBox.TabIndex = 12;
+            this.ManagerNameTextBox.Text = "NoData";
+            this.ManagerNameTextBox.Click += new System.EventHandler(this.ManagerNameTextBox_Click);
+            // 
+            // StaffNumTextBox
+            // 
+            this.StaffNumTextBox.AutoSize = true;
+            this.StaffNumTextBox.Location = new System.Drawing.Point(99, 62);
+            this.StaffNumTextBox.Name = "StaffNumTextBox";
+            this.StaffNumTextBox.Size = new System.Drawing.Size(44, 13);
+            this.StaffNumTextBox.TabIndex = 13;
+            this.StaffNumTextBox.Text = "NoData";
+            // 
+            // SoldCountTextBox
+            // 
+            this.SoldCountTextBox.AutoSize = true;
+            this.SoldCountTextBox.Location = new System.Drawing.Point(72, 91);
+            this.SoldCountTextBox.Name = "SoldCountTextBox";
+            this.SoldCountTextBox.Size = new System.Drawing.Size(44, 13);
+            this.SoldCountTextBox.TabIndex = 14;
+            this.SoldCountTextBox.Text = "NoData";
+            // 
+            // StockCostTextBox
+            // 
+            this.StockCostTextBox.AutoSize = true;
+            this.StockCostTextBox.Location = new System.Drawing.Point(75, 143);
+            this.StockCostTextBox.Name = "StockCostTextBox";
+            this.StockCostTextBox.Size = new System.Drawing.Size(44, 13);
+            this.StockCostTextBox.TabIndex = 15;
+            this.StockCostTextBox.Text = "NoData";
+            // 
+            // UniqueCountTextBox
+            // 
+            this.UniqueCountTextBox.AutoSize = true;
+            this.UniqueCountTextBox.Location = new System.Drawing.Point(85, 117);
+            this.UniqueCountTextBox.Name = "UniqueCountTextBox";
+            this.UniqueCountTextBox.Size = new System.Drawing.Size(44, 13);
+            this.UniqueCountTextBox.TabIndex = 16;
+            this.UniqueCountTextBox.Text = "NoData";
             // 
             // StoreViewer
             // 
@@ -548,16 +550,11 @@
         private System.Windows.Forms.Button EmployeeViewerButton;
         private System.Windows.Forms.Button StoreViewerButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox StockCostTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox UniqueCountTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox SoldCountTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox StaffNumTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox ManagerNameTextBox;
         private System.Windows.Forms.TextBox StoreNameTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
@@ -571,5 +568,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataVisualization.Charting.Chart ItemProfitChart;
         private System.Windows.Forms.Button ViewerBackButton;
+        private System.Windows.Forms.Label UniqueCountTextBox;
+        private System.Windows.Forms.Label StockCostTextBox;
+        private System.Windows.Forms.Label SoldCountTextBox;
+        private System.Windows.Forms.Label StaffNumTextBox;
+        private System.Windows.Forms.Label ManagerNameTextBox;
     }
 }

@@ -151,11 +151,49 @@ namespace DataEntryTestApp
             UnhideEventViewer(parentReference);
         }
 
+        //click staff member off of list, opens staff viewer / manager viewer on using clicked staff member
         private void StaffMemberListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(StaffMemberListBox.SelectedIndex != -1)
+            if (StaffMemberListBox.SelectedIndex != -1)
             {
-                //get the target staff member
+                Staff foo = storedEvent.staffMembers.First(bar => bar.name == StaffMemberListBox.SelectedItem.ToString());
+                if (storedEvent.CheckIsManager(foo)) // staff member is manager
+                {
+                    ManagerViewer tempForm = new ManagerViewer(parentReference, storedEvent, foo);
+                    this.Hide();
+                    tempForm.ShowDialog();
+                    this.Close();
+                }
+                else // staff member is not manager
+                {
+                    Form newForm = new Form(parentReference, storedEvent, foo);
+                    this.Hide();
+                    newForm.ShowDialog();
+                    this.Close();
+                }
+            }
+        }
+
+        //opens manager viewer using clicked manager as target
+        private void ManagerNameTextBox_Click(object sender, EventArgs e)
+        {
+            Store foo = storedEvent.stores.First(bar => bar.manager.name == ManagerNameTextBox.Text);
+            ManagerViewer newForm = new ManagerViewer(parentReference, storedEvent, foo.manager);
+            this.Hide();
+            newForm.ShowDialog();
+            this.Close();
+        }
+
+        private void InventoryListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (InventoryListBox.SelectedIndex != -1)
+            {
+                Item foo = storedEvent.eventItems.First(bar => bar.name == InventoryListBox.SelectedItem.ToString());
+
+                ItemViewer tempForm = new ItemViewer(parentReference, storedEvent, foo);
+                this.Hide();
+                tempForm.ShowDialog();
+                this.Close();
             }
         }
     }
