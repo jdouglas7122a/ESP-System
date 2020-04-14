@@ -75,11 +75,12 @@ namespace DataEntryTestApp
             if(EventNameTextBox.TextLength != 0)
             {
                 this.Hide();
-                using (var eventViewer = new EventInitializer())
+                using (var eventViewer = new EventInitializer(EventNameTextBox.Text))
                 {
                     switch (eventViewer.ShowDialog())
                     {
                         case DialogResult.OK:
+                            //send data to server
                             break;
                         case DialogResult.Cancel:
                             break;

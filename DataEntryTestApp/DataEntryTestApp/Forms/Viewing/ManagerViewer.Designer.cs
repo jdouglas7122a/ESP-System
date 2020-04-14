@@ -51,6 +51,7 @@
             this.ViewerBackButton = new System.Windows.Forms.Button();
             this.ManagerListBox = new System.Windows.Forms.ListBox();
             this.EmployeeListBox = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.FormHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -335,17 +336,27 @@
             // EmployeeListBox
             // 
             this.EmployeeListBox.FormattingEnabled = true;
-            this.EmployeeListBox.Location = new System.Drawing.Point(649, 56);
+            this.EmployeeListBox.Location = new System.Drawing.Point(649, 69);
             this.EmployeeListBox.Name = "EmployeeListBox";
-            this.EmployeeListBox.Size = new System.Drawing.Size(139, 381);
+            this.EmployeeListBox.Size = new System.Drawing.Size(139, 368);
             this.EmployeeListBox.TabIndex = 85;
             this.EmployeeListBox.SelectedIndexChanged += new System.EventHandler(this.EmployeeListBox_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(646, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 13);
+            this.label3.TabIndex = 86;
+            this.label3.Text = "Employee\'s Managed:";
             // 
             // ManagerViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.EmployeeListBox);
             this.Controls.Add(this.ManagerListBox);
             this.Controls.Add(this.ViewerBackButton);
@@ -398,5 +409,6 @@
         private System.Windows.Forms.Label StoreNameTextBox;
         private System.Windows.Forms.Label SalaryTextBox;
         private System.Windows.Forms.Label NameTextBox;
+        private System.Windows.Forms.Label label3;
     }
 }

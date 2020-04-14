@@ -9,7 +9,6 @@ C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\bin\Debug\Re
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\bin\Debug\MySql.Data.xml
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EmployeeInitializer.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EventInitializer.resources
-C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.Forms.Creation.ItemInitializer.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.Form.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.EventViewer.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.Form1.resources
@@ -27,4 +26,4 @@ C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\Da
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.exe
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.pdb
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.BaseForm.resources
-C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csprojAssemblyReference.cache
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.ItemInitializer.resources

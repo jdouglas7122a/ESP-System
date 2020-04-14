@@ -234,6 +234,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.EventNameTextBox);
             this.panel2.Location = new System.Drawing.Point(217, 184);

@@ -106,7 +106,7 @@ namespace DataEntryTestApp
         {
             if(!_temp.Visible)
             {
-                windowPosition = this.Location;
+                 windowPosition = this.Location;
                 this.Hide();
                 _temp.Location = windowPosition;
                 _temp.Show();
@@ -116,8 +116,8 @@ namespace DataEntryTestApp
         //creates a new window when navigating child forms to the event viewer, on child is true if
         protected void ShowViewer(string type, EventViewer _temp, Event _eventData)
         {
-            System.Windows.Forms.Form newForm = new System.Windows.Forms.Form();
             windowPosition = this.Location;
+            System.Windows.Forms.Form newForm = new System.Windows.Forms.Form();
             
             switch(type.ToLower())
             {
@@ -143,16 +143,44 @@ namespace DataEntryTestApp
             }
         }
 
-        private void InitializeComponent()
+        //======================Initializer Properties============================
+        protected void ShowInitializer(string type, EventInitializer _temp, Event _eventData)
         {
-            this.SuspendLayout();
-            // 
-            // BaseForm
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "BaseForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.ResumeLayout(false);
+            System.Windows.Forms.Form newForm = new System.Windows.Forms.Form();
+            windowPosition = this.Location;
+
+            switch (type.ToLower())
+            {
+                case "store":
+                    newForm = new StoreInitialize(_temp, _eventData);
+                    break;
+                case "item":
+                    newForm = new ItemInitializer(_temp, _eventData);
+                    break;
+                case "employee":
+                    newForm = new EmployeeInitializer(_temp, _eventData);
+                    break;
+            }
+            this.Hide();
+            newForm.Location = windowPosition;
+            newForm.ShowDialog();
+            if (!(this is EventInitializer)) // if the current open page is not an event viewer
+            {
+                this.Close();
+            }
+        }
+
+        protected void UnhideEventInitializer(EventInitializer _temp)
+        {
+            if (!_temp.Visible)
+            {
+                windowPosition = this.Location;
+                this.Hide();
+                _temp.Location = windowPosition;
+                _temp.Show();
+                _temp.UpdatePageContents();
+                this.Close();
+            }
         }
     }
 }
