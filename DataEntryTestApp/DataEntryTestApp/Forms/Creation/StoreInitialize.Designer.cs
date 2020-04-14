@@ -170,6 +170,7 @@
             this.ManagerComboBox.Name = "ManagerComboBox";
             this.ManagerComboBox.Size = new System.Drawing.Size(208, 21);
             this.ManagerComboBox.TabIndex = 95;
+            this.ManagerComboBox.SelectedIndexChanged += new System.EventHandler(this.ManagerComboBox_TextChanged);
             // 
             // panel5
             // 

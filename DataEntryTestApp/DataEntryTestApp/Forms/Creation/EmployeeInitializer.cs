@@ -65,9 +65,9 @@ namespace DataEntryTestApp
         //adds employee to new event, and updates list on page
         private void AddEmployeeButton_Click(object sender, EventArgs e)
         {
-            if(NameTextBox.Text != "" && PayTextBox.Text != "")
+            try
             {
-                try
+                if(CheckForFields())
                 {
                     Staff foo = new Staff(NameTextBox.Text, (float.Parse(PayTextBox.Text)));
                     eventRef.staffMembers.Add(foo);
@@ -77,10 +77,32 @@ namespace DataEntryTestApp
                     PayTextBox.Text = "";
                     NameTextBox.Text = "";
                 }
-                catch(Exception bar)
+            }
+            catch(Exception bar)
+            {
+                ErrorLabel.Text = "Error: " + bar.Message;
+            }
+        }
+
+        private bool CheckForFields()
+        {
+            if(NameTextBox.Text != "")
+            {
+                if (PayTextBox.Text != "")
                 {
-                    ErrorLabel.Text = "Error: " + bar.Message;
+                    ErrorLabel.Text = "Correct";
+                    return true;
                 }
+                else
+                {
+                    ErrorLabel.Text = "Error: No Pay Assigned";
+                    return false;
+                }
+            }
+            else
+            {
+                ErrorLabel.Text = "Error: No Name Assigned";
+                return false;
             }
         }
 

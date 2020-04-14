@@ -80,7 +80,7 @@ namespace DataEntryTestApp
                     switch (eventViewer.ShowDialog())
                     {
                         case DialogResult.OK:
-                            //send data to server
+                            UploadNewEvent(eventViewer.newEvent);
                             break;
                         case DialogResult.Cancel:
                             break;
@@ -94,9 +94,19 @@ namespace DataEntryTestApp
             }
         }
 
+        //uploads new event to server
+        private void UploadNewEvent(Event _newEvent)
+        {
+            //communication goes here
+            //code bellow is for offline use
+            events.Add(_newEvent);
+            DisplayEventNames();
+        }
+
         //adds all event names to list
         private void DisplayEventNames()
         {
+            EventsListBox.Items.Clear();
             foreach(Event foo in events)
             {
                 EventsListBox.Items.Add(foo.eventName);

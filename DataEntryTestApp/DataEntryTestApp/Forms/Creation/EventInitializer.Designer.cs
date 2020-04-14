@@ -41,7 +41,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.ManagerLabel = new System.Windows.Forms.Button();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.EmployeeListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.StaffMemberLabel = new System.Windows.Forms.Label();
             this.StoresLabel = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
+            this.ELabel = new System.Windows.Forms.Label();
             this.FormHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,7 +117,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(335, 95);
+            this.label8.Location = new System.Drawing.Point(335, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 84;
@@ -237,23 +238,24 @@
             this.button10.Text = "--";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // ManagerLabel
+            // SubmitButton
             // 
-            this.ManagerLabel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ManagerLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ManagerLabel.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ManagerLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ManagerLabel.Location = new System.Drawing.Point(645, 362);
-            this.ManagerLabel.Name = "ManagerLabel";
-            this.ManagerLabel.Size = new System.Drawing.Size(134, 76);
-            this.ManagerLabel.TabIndex = 97;
-            this.ManagerLabel.Text = "Submit";
-            this.ManagerLabel.UseVisualStyleBackColor = false;
+            this.SubmitButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubmitButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitButton.Location = new System.Drawing.Point(645, 360);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(134, 67);
+            this.SubmitButton.TabIndex = 97;
+            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(178, 154);
+            this.label3.Location = new System.Drawing.Point(178, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 101;
@@ -271,7 +273,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(642, 95);
+            this.label2.Location = new System.Drawing.Point(642, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 103;
@@ -289,7 +291,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(493, 95);
+            this.label4.Location = new System.Drawing.Point(493, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 105;
@@ -307,7 +309,7 @@
             // ManagerListBox
             // 
             this.ManagerListBox.FormattingEnabled = true;
-            this.ManagerListBox.Location = new System.Drawing.Point(181, 170);
+            this.ManagerListBox.Location = new System.Drawing.Point(181, 163);
             this.ManagerListBox.Name = "ManagerListBox";
             this.ManagerListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.ManagerListBox.Size = new System.Drawing.Size(146, 264);
@@ -334,7 +336,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(178, 125);
+            this.label6.Location = new System.Drawing.Point(178, 122);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 110;
@@ -352,7 +354,7 @@
             // StoresLabel
             // 
             this.StoresLabel.AutoSize = true;
-            this.StoresLabel.Location = new System.Drawing.Point(224, 125);
+            this.StoresLabel.Location = new System.Drawing.Point(224, 122);
             this.StoresLabel.Name = "StoresLabel";
             this.StoresLabel.Size = new System.Drawing.Size(44, 13);
             this.StoresLabel.TabIndex = 112;
@@ -375,11 +377,21 @@
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // ELabel
+            // 
+            this.ELabel.AutoSize = true;
+            this.ELabel.ForeColor = System.Drawing.Color.Red;
+            this.ELabel.Location = new System.Drawing.Point(180, 431);
+            this.ELabel.Name = "ELabel";
+            this.ELabel.Size = new System.Drawing.Size(0, 13);
+            this.ELabel.TabIndex = 136;
+            // 
             // EventInitializer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ELabel);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.StoresLabel);
             this.Controls.Add(this.StaffMemberLabel);
@@ -393,7 +405,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.EmployeeListBox);
-            this.Controls.Add(this.ManagerLabel);
+            this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
@@ -430,7 +442,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button ManagerLabel;
+        private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox EmployeeListBox;
         private System.Windows.Forms.Label label2;
@@ -444,5 +456,6 @@
         private System.Windows.Forms.Label StaffMemberLabel;
         private System.Windows.Forms.Label StoresLabel;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Label ELabel;
     }
 }

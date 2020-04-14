@@ -15,6 +15,8 @@ namespace DataEntryTestApp
         EventInitializer parentRef;
         Event eventRef;
         Store newStore;
+        String previousManager = "";
+        bool submitPushed = false;
         public StoreInitialize(EventInitializer _parentRef, Event _event)
         {
             parentRef = _parentRef;
@@ -35,24 +37,35 @@ namespace DataEntryTestApp
             StockTextBox.Clear();
             StaffListBox.Items.Clear();
             ItemsListBox.Items.Clear();
+            previousManager = "";
         }
+
+        public void ResetItemComboBox()
+        {
+            ItemComboBox.Items.Clear();
+            foreach (Item foo in eventRef.eventItems)
+            {
+                ItemComboBox.Items.Add(foo.name);
+            }
+        }
+
 
         //updates all comobo boxes on the page to reflect all options
         public void UpdatePageContents()
         {
             foreach(Staff foo in eventRef.staffMembers)
             {
-                ManagerComboBox.Items.Add(foo.name);
-                StaffComboBox.Items.Add(foo.name);
+                if(!foo.used)
+                {
+                    ManagerComboBox.Items.Add(foo.name);
+                    StaffComboBox.Items.Add(foo.name);
+                }
             }
-            foreach(Item bar in eventRef.eventItems)
+            foreach(Store bar in eventRef.stores)
             {
-                ItemComboBox.Items.Add(bar.name);
+                StoreListBox.Items.Add(bar.storeName);
             }
-            foreach(Store baz in eventRef.stores)
-            {
-                StoreListBox.Items.Add(baz.storeName);
-            }
+            ResetItemComboBox();
         }
 
         private void FormHeader_MouseDown(object sender, MouseEventArgs e)
@@ -104,6 +117,7 @@ namespace DataEntryTestApp
                 string staffName = StaffComboBox.SelectedItem.ToString();
                 newStore.staffOnDuty.Add(eventRef.staffMembers.First(foo => foo.name == staffName));
                 StaffListBox.Items.Add(staffName);
+                AddStaffUpdateForm();
                 StaffComboBox.SelectedIndex = -1;
             }
             else
@@ -126,6 +140,7 @@ namespace DataEntryTestApp
                     StoreItem newItem = new StoreItem(foo, faz);
                     newStore.inventory.Add(newItem);
                     ItemsListBox.Items.Add(itemName);
+                    ItemComboBox.Items.Remove(itemName);
                     ItemComboBox.SelectedIndex = -1;
                     StockTextBox.Text = "";
                 }
@@ -151,8 +166,10 @@ namespace DataEntryTestApp
                     {
                         if(StoreNameTextBox.Text != "")
                         {
+                            submitPushed = true;
                             newStore.storeName = StoreNameTextBox.Text;
                             eventRef.stores.Add(newStore);
+                            UpdateStaffUsed();
                             parentRef.UpdateEvent(eventRef);
                             StoreListBox.Items.Add(newStore.storeName);
                             StoreNameTextBox.Text = "";
@@ -162,7 +179,11 @@ namespace DataEntryTestApp
                             StockTextBox.Text = "";
                             StaffListBox.Items.Clear();
                             ItemsListBox.Items.Clear();
+                            ManagerComboBox.Items.Remove(newStore.manager.name);
                             newStore = new Store();
+                            previousManager = "";
+                            submitPushed = false;
+                            ResetItemComboBox();
                         }
                         else
                         {
@@ -183,6 +204,43 @@ namespace DataEntryTestApp
             {
                 ErrorLabel.Text = "Error: No Manager Assigned";
             }
+        }
+
+        //when manager is selected, updates form to prevent duplication
+        private void ManagerComboBox_TextChanged(object sender, EventArgs e)
+        {
+            if(!submitPushed)
+            {
+                if (previousManager == "") // if there is no previous manager
+                {
+                    previousManager = ManagerComboBox.SelectedItem.ToString();
+                    StaffComboBox.Items.Remove(ManagerComboBox.SelectedItem.ToString());
+                }
+                else // had previous manager
+                {
+                    StaffComboBox.Items.Add(previousManager);
+                    previousManager = ManagerComboBox.SelectedItem.ToString();
+                    StaffComboBox.Items.Remove(ManagerComboBox.SelectedItem.ToString());
+                }
+            }
+        }
+        
+        //when staff member is added to store, stops that staff member from being re-added 
+        //to the same store as a staff member or as a manager
+        private void AddStaffUpdateForm()
+        {
+            ManagerComboBox.Items.Remove(StaffComboBox.SelectedItem.ToString());
+            StaffComboBox.Items.Remove(StaffComboBox.SelectedItem.ToString());
+        }
+
+        //sets all used staff to true (managers and staff members), called on submit
+        private void UpdateStaffUsed()
+        {
+            foreach(Staff foo in newStore.staffOnDuty)
+            {
+                eventRef.staffMembers.First(bar => foo == bar).used = true;
+            }
+            eventRef.staffMembers.First(baz => baz == newStore.manager).used = true;
         }
     }
 }

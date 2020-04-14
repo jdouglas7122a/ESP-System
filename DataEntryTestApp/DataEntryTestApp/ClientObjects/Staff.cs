@@ -11,6 +11,8 @@ namespace DataEntryTestApp
         public string name { get; }
         public float pay { get; set; } // pounds per hour
 
+        public bool used = false; // used for setting up event, prevents one staff member having multiple roles
+
         //constructor
         public Staff(string _name, float _pay)
         {

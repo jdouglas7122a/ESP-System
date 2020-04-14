@@ -72,32 +72,53 @@ namespace DataEntryTestApp
             UnhideEventInitializer(parentRef);
         }
 
+        //adds item to event item list
         private void AddButon_Click(object sender, EventArgs e)
         {
-            if(ItemNameTextBox.Text != "" && WholeSaleTextBox.Text != "" && SaleTextBox.Text != "")
+            try
             {
-                try
+                if(ItemNameTextBox.Text != "")
                 {
-                    if(float.Parse(WholeSaleTextBox.Text) < float.Parse(SaleTextBox.Text))
+                    if(WholeSaleTextBox.Text != "")
                     {
-                        Item foo = new Item(ItemNameTextBox.Text, float.Parse(WholeSaleTextBox.Text), float.Parse(SaleTextBox.Text));
-                        eventRef.eventItems.Add(foo);
-                        parentRef.UpdateEvent(eventRef);
-                        ItemListBox.Items.Add(foo.name);
-                        ItemNameTextBox.Clear();
-                        WholeSaleTextBox.Clear();
-                        SaleTextBox.Clear();
+                        if(SaleTextBox.Text != "")
+                        {
+                            if (float.Parse(WholeSaleTextBox.Text) < float.Parse(SaleTextBox.Text))
+                            {
+                                Item foo = new Item(ItemNameTextBox.Text, float.Parse(WholeSaleTextBox.Text), float.Parse(SaleTextBox.Text));
+                                eventRef.eventItems.Add(foo);
+                                parentRef.UpdateEvent(eventRef);
+                                ItemListBox.Items.Add(foo.name);
+                                ItemNameTextBox.Clear();
+                                WholeSaleTextBox.Clear();
+                                SaleTextBox.Clear();
+                            }
+                            else
+                            {
+                                ErrorLabel.Text = "Error: Item sold for less than or equal to wholesale";
+                            }
+                        }
+                        else
+                        {
+                            ErrorLabel.Text = "Error: No Sale Value Assigned";
+                        }
                     }
                     else
                     {
-                        ErrorLabel.Text = "Error: Item sold for less than wholesale";
+                        ErrorLabel.Text = "Error: No Wholesale Value Assigned";
                     }
                 }
-                catch(Exception eMessage)
+                else
                 {
-                    ErrorLabel.Text = "Error: " + eMessage.Message;
+                    ErrorLabel.Text = "Error: No Item Name Assigned";
                 }
+                
             }
+            catch(Exception eMessage)
+            {
+                ErrorLabel.Text = "Error: " + eMessage.Message;
+            }
+           
         }
     }
 }

@@ -12,7 +12,7 @@ namespace DataEntryTestApp
 {
     public partial class EventInitializer : BaseForm
     {
-        Event newEvent;
+        public Event newEvent;
 
         public EventInitializer(string _eventName)
         {
@@ -105,7 +105,19 @@ namespace DataEntryTestApp
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
+            this.DialogResult = DialogResult.Cancel;
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            if(newEvent.stores.Count != 0)
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                ELabel.Text = "Error: No Stores Assigned";
+            }
         }
     }
 }

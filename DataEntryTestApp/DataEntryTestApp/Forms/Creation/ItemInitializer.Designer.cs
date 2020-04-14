@@ -52,6 +52,7 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.ItemListBox = new System.Windows.Forms.ListBox();
             this.ErrorLabel = new System.Windows.Forms.Label();
+            this.ELabel = new System.Windows.Forms.Label();
             this.FormHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -348,11 +349,21 @@
             this.ErrorLabel.Size = new System.Drawing.Size(0, 13);
             this.ErrorLabel.TabIndex = 134;
             // 
+            // ELabel
+            // 
+            this.ELabel.AutoSize = true;
+            this.ELabel.ForeColor = System.Drawing.Color.Red;
+            this.ELabel.Location = new System.Drawing.Point(348, 402);
+            this.ELabel.Name = "ELabel";
+            this.ELabel.Size = new System.Drawing.Size(0, 13);
+            this.ELabel.TabIndex = 135;
+            // 
             // ItemInitializer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ELabel);
             this.Controls.Add(this.ErrorLabel);
             this.Controls.Add(this.ItemListBox);
             this.Controls.Add(this.BackButton);
@@ -406,5 +417,6 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.ListBox ItemListBox;
         private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.Label ELabel;
     }
 }
