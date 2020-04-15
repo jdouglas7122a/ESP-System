@@ -27,3 +27,7 @@ C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\Da
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.pdb
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.BaseForm.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.ItemInitializer.resources
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.ItemSales.resources
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.SalesCompleteMessage.resources
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.StoreSales.resources
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.SalesUpdateConfirmation.resources

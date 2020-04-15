@@ -23,7 +23,7 @@ namespace DataEntryTestApp
             storedEvent = _eventData;
             InitializeComponent();
             GenerateTable();
-            UpdatePageData(storedEvent.stores[1]);
+            UpdatePageData(storedEvent.stores[0]);
         }
 
         //opens a store viewer with target store open
