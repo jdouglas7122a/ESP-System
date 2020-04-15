@@ -36,10 +36,10 @@ namespace DataEntryTestApp
         //finishes data input
         private void NextButton_Click(object sender, EventArgs e)
         {
-            ErrorLabel.Text = "";
+            ClearErrorLabel(ErrorLabel);
             if(CheckSoldUnderStock())
             {
-                inventoryRef[currentTarget].sold = int.Parse(SoldTextBox.Text);
+                inventoryRef[currentTarget].SetSaleCount(int.Parse(SoldTextBox.Text));
                 if (currentTarget == itemCount - 1)
                 {
                     NextButton.Text = "Finish";
@@ -65,7 +65,7 @@ namespace DataEntryTestApp
             ErrorLabel.Text = "";
             if (CheckSoldUnderStock())
             {
-                inventoryRef[currentTarget].sold = int.Parse(SoldTextBox.Text);
+                inventoryRef[currentTarget].SetSaleCount(int.Parse(SoldTextBox.Text));
                 if (currentTarget == itemCount)
                 {
                     NextButton.Text = "Next Item";
@@ -74,7 +74,7 @@ namespace DataEntryTestApp
                 }
                 else if (currentTarget == 0)
                 {
-                    ErrorLabel.Text = "Error: No Previous Item";
+                    SetError(ErrorLabel, "No Previous Item");
                 }
                 else
                 {
@@ -92,7 +92,7 @@ namespace DataEntryTestApp
             {
                 if (int.Parse(StockTextBox.Text) < int.Parse(SoldTextBox.Text))
                 {
-                    ErrorLabel.Text = "Error: Cannot Sell More Than Stocked";
+                    SetError(ErrorLabel, "Cannot Sell More Than Stocked");
                     return false;
                 }
                 else
@@ -102,7 +102,7 @@ namespace DataEntryTestApp
             }
             catch(Exception errorMessage)
             {
-                ErrorLabel.Text = "Error: " + errorMessage.Message;
+                SetError(ErrorLabel, errorMessage.Message);
                 return false;
             }
         }

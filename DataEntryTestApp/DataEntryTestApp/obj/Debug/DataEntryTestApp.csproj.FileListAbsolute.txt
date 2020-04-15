@@ -31,3 +31,4 @@ C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\Da
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.SalesCompleteMessage.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.StoreSales.resources
 C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.SalesUpdateConfirmation.resources
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.csprojAssemblyReference.cache

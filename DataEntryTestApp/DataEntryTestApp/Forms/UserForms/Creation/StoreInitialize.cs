@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DataEntryTestApp
 {
-    public partial class StoreInitialize : BaseForm
+    public partial class StoreInitialize : Initializer
     {
         EventInitializer parentRef;
         Event eventRef;

@@ -30,6 +30,7 @@ namespace DataEntryTestApp
             eventItems = new List<Item>();
         }
 
+        //returns the total proffit of the event
         public float GetEventProfit()
         {
             float profit = 0;
@@ -62,6 +63,24 @@ namespace DataEntryTestApp
                 }
             }
             return false;
+        }
+
+        //returns a store with the specified name
+        public Store GetStore(string _storeName)
+        {
+            return stores.First(foo => foo.storeName == _storeName);
+        }
+
+        //returns the index of the store with the chosen name
+        private int GetStoreIndex(string _storeName)
+        {
+            return stores.FindIndex(foo => foo.storeName == _storeName);
+        }
+
+        //picks a store by name, and sets its inventory = to passed List<store>
+        public void SetStoreInventory(string _storeName, List<StoreItem> _inventory)
+        {
+            stores.First(foo => foo.storeName == _storeName).SetInventory(_inventory);
         }
     }
 }

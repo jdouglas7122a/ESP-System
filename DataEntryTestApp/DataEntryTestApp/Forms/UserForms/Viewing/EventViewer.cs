@@ -11,7 +11,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DataEntryTestApp
 {
-    public partial class EventViewer : BaseForm
+    public partial class EventViewer : Viewer
     {
         Event storedEvent;
    

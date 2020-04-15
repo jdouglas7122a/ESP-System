@@ -12,7 +12,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace DataEntryTestApp
 {
-    public partial class StoreViewer : BaseForm
+    public partial class StoreViewer : Viewer
     {
         public EventViewer parentReference;
         public Event storedEvent;

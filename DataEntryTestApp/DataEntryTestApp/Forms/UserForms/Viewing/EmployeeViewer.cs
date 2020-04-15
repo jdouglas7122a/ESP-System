@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DataEntryTestApp
 {
-    public partial class Form : BaseForm
+    public partial class Form : Viewer
     {
         public EventViewer parentReference;
         public Event storedEvent;
