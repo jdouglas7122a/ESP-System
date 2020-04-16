@@ -38,6 +38,7 @@ namespace DataEntryTestApp
             }
         }
 
+        //used to return to the parent form
         protected void UnhideEventInitializer(EventInitializer _temp)
         {
             if (!_temp.Visible)
@@ -49,6 +50,51 @@ namespace DataEntryTestApp
                 _temp.UpdatePageContents();
                 this.Close();
             }
+        }
+
+        //deselects item in combo box
+        protected void DeselectComboBox(ComboBox _target)
+        {
+            _target.SelectedIndex = -1;
+        }
+
+        //deselects multiple combo boxes
+        protected void DeselectComboBoxes(List<ComboBox> _targets)
+        {
+            foreach(ComboBox foo in _targets)
+            {
+                DeselectComboBox(foo);
+            }
+        }
+
+        //inserts item into combo box
+        protected void ComboBoxInsert(ComboBox _target, string _foo)
+        {
+            _target.Items.Add(_foo);
+        }
+
+        protected void ComboBoxRemove(ComboBox _target, string _foo)
+        {
+            _target.Items.Remove(_foo);
+        }
+
+        //checks if item has been selected in combo box
+        protected bool CheckCBSelected(ComboBox _target)
+        {
+            if(_target.SelectedIndex != -1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //gets data selected in combo box, should only be used if index  != -1, can cause errors if not
+        protected string GetCBSelected(ComboBox _target)
+        {
+            return _target.SelectedItem.ToString();
         }
     }
 }

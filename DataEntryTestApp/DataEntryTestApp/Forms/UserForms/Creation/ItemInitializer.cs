@@ -25,10 +25,11 @@ namespace DataEntryTestApp
         //called on start, updates the contents of the display list
         private void UpdateListContents()
         {
-            ItemListBox.Items.Clear();
+            ListBoxClear(ItemListBox);
+
             foreach(Item foo in eventRef.eventItems)
             {
-                ItemListBox.Items.Add(foo.name);
+                ListBoxInsert(ItemListBox, foo.name);
             }
         }
 
@@ -75,13 +76,14 @@ namespace DataEntryTestApp
         //adds item to event item list
         private void AddButon_Click(object sender, EventArgs e)
         {
+            ClearErrorLabel(ErrorLabel);
             try
             {
-                if(ItemNameTextBox.Text != "")
+                if(CheckTBOccupied(ItemNameTextBox))
                 {
-                    if(WholeSaleTextBox.Text != "")
+                    if(CheckTBOccupied(WholeSaleTextBox))
                     {
-                        if(SaleTextBox.Text != "")
+                        if(CheckTBOccupied(SaleTextBox))
                         {
                             if (float.Parse(WholeSaleTextBox.Text) < float.Parse(SaleTextBox.Text))
                             {
@@ -95,28 +97,28 @@ namespace DataEntryTestApp
                             }
                             else
                             {
-                                ErrorLabel.Text = "Error: Item sold for less than or equal to wholesale";
+                                SetError(ErrorLabel, "Items Sold > Items Stocked");
                             }
                         }
                         else
                         {
-                            ErrorLabel.Text = "Error: No Sale Value Assigned";
+                            SetError(ErrorLabel, "No Sale Value");
                         }
                     }
                     else
                     {
-                        ErrorLabel.Text = "Error: No Wholesale Value Assigned";
+                        SetError(ErrorLabel, "No Wholesale Value");
                     }
                 }
                 else
                 {
-                    ErrorLabel.Text = "Error: No Item Name Assigned";
+                    SetError(ErrorLabel, "No Item Name Assigned");
                 }
                 
             }
             catch(Exception eMessage)
             {
-                ErrorLabel.Text = "Error: " + eMessage.Message;
+                SetError(ErrorLabel, eMessage.Message);
             }
            
         }

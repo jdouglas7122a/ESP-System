@@ -43,7 +43,7 @@ namespace DataEntryTestApp
         {
             foreach (Item item in storedEvent.eventItems)
             {
-                EventItemListBox.Items.Add(item.name);
+                ListBoxInsert(EventItemListBox, item.name);
             }
         }
         //updates all fields based on a selected item

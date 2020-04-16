@@ -79,6 +79,12 @@ namespace DataEntryTestApp
             _target.Items.Remove(_foo);
         }
 
+        //removes all items from specified list box
+        protected void ListBoxClear(ListBox _target)
+        {
+            _target.Items.Clear();
+        }
+
         //sets specified error label to message
         protected void SetError(Label _target, string _message)
         {
@@ -86,9 +92,9 @@ namespace DataEntryTestApp
         }
 
         //clears error Label specified
-        protected void ClearErrorLabel(Label _errorLabel)
+        protected void ClearErrorLabel(Label _target)
         {
-            _errorLabel.Text = "";
+            _target.Text = "";
         }
 
         //formats any float into a £0.00 format
@@ -127,6 +133,19 @@ namespace DataEntryTestApp
         protected bool CheckItemSelected(ListBox _target)
         {
             if(_target.SelectedIndex == -1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        //checks if text box is empty
+        protected bool CheckTBOccupied(TextBox _target)
+        {
+            if(_target.Text == "")
             {
                 return false;
             }

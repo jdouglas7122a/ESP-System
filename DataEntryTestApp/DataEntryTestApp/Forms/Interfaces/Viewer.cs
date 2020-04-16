@@ -53,5 +53,11 @@ namespace DataEntryTestApp
                 this.Close();
             }
         }
+
+        //gets string selected on the list
+        protected string GetListBoxSelected(ListBox _target)
+        {
+            return _target.SelectedItem.ToString();
+        }
     }
 }
