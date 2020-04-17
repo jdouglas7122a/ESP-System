@@ -87,13 +87,28 @@ namespace DataEntryTestApp
                         {
                             if (float.Parse(WholeSaleTextBox.Text) < float.Parse(SaleTextBox.Text))
                             {
-                                Item foo = new Item(ItemNameTextBox.Text, float.Parse(WholeSaleTextBox.Text), float.Parse(SaleTextBox.Text));
-                                eventRef.eventItems.Add(foo);
-                                parentRef.UpdateEvent(eventRef);
-                                ItemListBox.Items.Add(foo.name);
-                                ItemNameTextBox.Clear();
-                                WholeSaleTextBox.Clear();
-                                SaleTextBox.Clear();
+                                if(float.Parse(WholeSaleTextBox.Text) > 0)
+                                {
+                                    if(float.Parse(SaleTextBox.Text) > 0)
+                                    {
+                                        Item foo = new Item(ItemNameTextBox.Text, float.Parse(WholeSaleTextBox.Text), float.Parse(SaleTextBox.Text));
+                                        eventRef.eventItems.Add(foo);
+                                        parentRef.UpdateEvent(eventRef);
+                                        ItemListBox.Items.Add(foo.name);
+                                        ItemNameTextBox.Clear();
+                                        WholeSaleTextBox.Clear();
+                                        SaleTextBox.Clear();
+                                    }
+                                    else
+                                    {
+                                        SetError(ErrorLabel, "Sale Price Cannot Be =< 0");
+                                    }
+                                  
+                                }
+                                else
+                                {
+                                    SetError(ErrorLabel, "Wholesale Price Cannot Be =< 0");
+                                }
                             }
                             else
                             {

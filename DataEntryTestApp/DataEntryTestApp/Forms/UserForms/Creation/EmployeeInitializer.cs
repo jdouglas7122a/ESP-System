@@ -69,13 +69,20 @@ namespace DataEntryTestApp
             {
                 if(CheckForFields())
                 {
-                    Staff foo = new Staff(NameTextBox.Text, (float.Parse(PayTextBox.Text)));
-                    eventRef.staffMembers.Add(foo);
-                    parentRef.UpdateEvent(eventRef);
-                    ListBoxInsert(EmployeeListBox, foo.name);
-                    ClearErrorLabel(ErrorLabel);
-                    PayTextBox.Text = "";
-                    NameTextBox.Text = "";
+                    if(float.Parse(PayTextBox.Text) >= 0)
+                    {
+                        Staff foo = new Staff(NameTextBox.Text, (float.Parse(PayTextBox.Text)));
+                        eventRef.staffMembers.Add(foo);
+                        parentRef.UpdateEvent(eventRef);
+                        ListBoxInsert(EmployeeListBox, foo.name);
+                        ClearErrorLabel(ErrorLabel);
+                        PayTextBox.Text = "";
+                        NameTextBox.Text = "";
+                    }
+                    else
+                    {
+                        SetError(ErrorLabel, "Pay Cannot Be < 0");
+                    }
                 }
             }
             catch(Exception bar)

@@ -139,15 +139,22 @@ namespace DataEntryTestApp
             {
                 if(CheckCBSelected(ItemComboBox))
                 {
-                    string itemName = GetCBSelected(ItemComboBox);
-                    Item foo = eventRef.GetItemByName(itemName);
-                    int bar = int.Parse(StockTextBox.Text);
-                    StoreItem newItem = new StoreItem(foo, bar);
-                    newStore.AddItemToInventory(newItem);
-                    ListBoxInsert(ItemsListBox, itemName);
-                    ComboBoxRemove(ItemComboBox, itemName);
-                    DeselectComboBox(ItemComboBox);
-                    StockTextBox.Text = "";
+                    if(int.Parse(StockTextBox.Text) > 0)
+                    {
+                        string itemName = GetCBSelected(ItemComboBox);
+                        Item foo = eventRef.GetItemByName(itemName);
+                        int bar = int.Parse(StockTextBox.Text);
+                        StoreItem newItem = new StoreItem(foo, bar);
+                        newStore.AddItemToInventory(newItem);
+                        ListBoxInsert(ItemsListBox, itemName);
+                        ComboBoxRemove(ItemComboBox, itemName);
+                        DeselectComboBox(ItemComboBox);
+                        StockTextBox.Text = "";
+                    }
+                    else
+                    {
+                        SetError(ErrorLabel, "Item Stock Cannot Be Less Than One");
+                    }
                 }
                 else
                 {
