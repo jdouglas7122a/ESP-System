@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventViewer));
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.FormLabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.StoreViewButton = new System.Windows.Forms.Button();
             this.FormHeader = new System.Windows.Forms.Panel();
             this._button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.Closebutton = new System.Windows.Forms.Button();
             this.ItemViewButton = new System.Windows.Forms.Button();
             this.ManagerViewButton = new System.Windows.Forms.Button();
@@ -71,12 +71,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ViewerBackButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FormHeader.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SumStoreProfChart)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InvestmentCompareChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MinimizeButton
@@ -205,8 +207,8 @@
             // FormHeader
             // 
             this.FormHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FormHeader.Controls.Add(this.pictureBox1);
             this.FormHeader.Controls.Add(this._button);
-            this.FormHeader.Controls.Add(this.label1);
             this.FormHeader.Controls.Add(this.Closebutton);
             this.FormHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.FormHeader.Location = new System.Drawing.Point(0, 0);
@@ -231,16 +233,6 @@
             this._button.Text = "_";
             this._button.UseVisualStyleBackColor = true;
             this._button.Click += new System.EventHandler(this._button_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(12, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Test Form For ODBC Connection";
             // 
             // Closebutton
             // 
@@ -316,17 +308,17 @@
             // 
             this.SumStoreProfChart.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.SumStoreProfChart.BorderlineColor = System.Drawing.SystemColors.InactiveBorder;
-            chartArea3.Name = "ChartArea1";
-            this.SumStoreProfChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.SumStoreProfChart.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.SumStoreProfChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.SumStoreProfChart.Legends.Add(legend1);
             this.SumStoreProfChart.Location = new System.Drawing.Point(3, 3);
             this.SumStoreProfChart.Name = "SumStoreProfChart";
             this.SumStoreProfChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.SumStoreProfChart.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.SumStoreProfChart.Series.Add(series1);
             this.SumStoreProfChart.Size = new System.Drawing.Size(313, 178);
             this.SumStoreProfChart.TabIndex = 0;
             this.SumStoreProfChart.Text = "chart1";
@@ -362,18 +354,18 @@
             // InvestmentCompareChart
             // 
             this.InvestmentCompareChart.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            chartArea4.Name = "ChartArea1";
-            this.InvestmentCompareChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.InvestmentCompareChart.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.InvestmentCompareChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.InvestmentCompareChart.Legends.Add(legend2);
             this.InvestmentCompareChart.Location = new System.Drawing.Point(3, 6);
             this.InvestmentCompareChart.Name = "InvestmentCompareChart";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 2;
-            this.InvestmentCompareChart.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 2;
+            this.InvestmentCompareChart.Series.Add(series2);
             this.InvestmentCompareChart.Size = new System.Drawing.Size(289, 147);
             this.InvestmentCompareChart.TabIndex = 0;
             this.InvestmentCompareChart.Text = "chart1";
@@ -530,6 +522,19 @@
             this.ViewerBackButton.UseVisualStyleBackColor = false;
             this.ViewerBackButton.Click += new System.EventHandler(this.ViewerBackButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // EventViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,13 +576,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventViewer";
             this.FormHeader.ResumeLayout(false);
-            this.FormHeader.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SumStoreProfChart)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.InvestmentCompareChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -596,7 +601,6 @@
         private System.Windows.Forms.Button StoreViewButton;
         private System.Windows.Forms.Panel FormHeader;
         private System.Windows.Forms.Button _button;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Closebutton;
         private System.Windows.Forms.Button ItemViewButton;
         private System.Windows.Forms.Button ManagerViewButton;
@@ -622,5 +626,6 @@
         private System.Windows.Forms.Label ProffitLabel;
         private System.Windows.Forms.DataVisualization.Charting.Chart SumStoreProfChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart InvestmentCompareChart;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

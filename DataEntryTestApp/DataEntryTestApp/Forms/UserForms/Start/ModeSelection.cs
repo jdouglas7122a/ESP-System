@@ -13,8 +13,8 @@ namespace DataEntryTestApp
     public partial class ModeSelection : BaseForm
     {
        
-        List<Event> events = new List<Event>(){new NoNetworkEvent("full").tempEvent};  // loads an example into application
-        List<Event> incompleteEvents = new List<Event>() { new NoNetworkEvent("partial").tempEvent };
+        List<Event> events = new List<Event>(){/*new NoNetworkEvent("full").tempEvent*/};  // loads an example into application
+        List<Event> incompleteEvents = new List<Event>() {/* new NoNetworkEvent("partial").tempEvent */};
         public ModeSelection()
         {
             InitializeComponent();
@@ -49,49 +49,65 @@ namespace DataEntryTestApp
         //hides current window and opens event viewer
         private void SelectButton_Click(object sender, EventArgs e)
         {
-            if(EventsListBox.SelectedIndex != -1) // checks that item is selected
+            ClearErrorLabel(ErrorLabel);
+            if (EventsListBox.SelectedIndex != -1) // checks that item is selected
             {
-                this.Hide();
-                using (var eventViewer = new EventViewer(events[EventsListBox.SelectedIndex]))
+                try
                 {
-                    switch (eventViewer.ShowDialog())
+                    this.Hide();
+                    using (var eventViewer = new EventViewer(events[EventsListBox.SelectedIndex]))
                     {
-                        case DialogResult.OK:
-                            break;
-                        case DialogResult.Cancel:
-                            break;
+                        switch (eventViewer.ShowDialog())
+                        {
+                            case DialogResult.OK:
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                        }
                     }
+                    this.Show();
                 }
-                this.Show();
+                catch (Exception)
+                { }
+               
             }
             else
             {
-                ErrorLabel.Text = "No Target Selected.";
+                SetError(ErrorLabel, "No Target Selected");
             }
         }
 
         //hides current window and opens event creation tool
         private void NewButton_Click(object sender, EventArgs e)
         {
-            if(EventNameTextBox.TextLength != 0)
+            ClearErrorLabel(ErrorLabel);
+            if (EventNameTextBox.TextLength != 0)
             {
-                this.Hide();
-                using (var eventViewer = new EventInitializer(EventNameTextBox.Text))
+                try
                 {
-                    switch (eventViewer.ShowDialog())
+                    this.Hide();
+                    using (var eventViewer = new EventInitializer(EventNameTextBox.Text))
                     {
-                        case DialogResult.OK:
-                            UploadNewEvent(eventViewer.newEvent);
-                            break;
-                        case DialogResult.Cancel:
-                            break;
+                        switch (eventViewer.ShowDialog())
+                        {
+                            case DialogResult.OK:
+                                UploadNewEvent(eventViewer.newEvent);
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                        }
                     }
+                    this.Show();
                 }
-                this.Show();
+                catch(Exception)
+                {
+
+                }
+               
             }
             else
             {
-                ErrorLabel.Text = "ERROR: No event name given.";
+                SetError(ErrorLabel, "Error: no event name given");
             }
         }
 
@@ -131,7 +147,7 @@ namespace DataEntryTestApp
 
         private void SalesDataButton_Click(object sender, EventArgs e)
         {
-            ErrorLabel.Text = "";
+            ClearErrorLabel(ErrorLabel);
             if (NoSaleListBox.SelectedIndex != -1)
             {
 
@@ -142,7 +158,7 @@ namespace DataEntryTestApp
 
             else
             {
-                ErrorLabel.Text = "Error: No Event Selected.";
+                SetError(ErrorLabel, "No Event Selected");
             }
         }
     }

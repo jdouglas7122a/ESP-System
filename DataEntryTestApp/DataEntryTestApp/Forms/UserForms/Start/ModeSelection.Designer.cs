@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModeSelection));
             this.FormHeader = new System.Windows.Forms.Panel();
             this.MinimizeButton = new System.Windows.Forms.Button();
-            this.FormLabel = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -50,15 +50,17 @@
             this.NoSaleListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.SalesDataButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FormHeader.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FormHeader
             // 
             this.FormHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FormHeader.Controls.Add(this.pictureBox1);
             this.FormHeader.Controls.Add(this.MinimizeButton);
-            this.FormHeader.Controls.Add(this.FormLabel);
             this.FormHeader.Controls.Add(this.ExitButton);
             this.FormHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.FormHeader.Location = new System.Drawing.Point(0, 0);
@@ -83,16 +85,6 @@
             this.MinimizeButton.Text = "_";
             this.MinimizeButton.UseVisualStyleBackColor = true;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
-            // 
-            // FormLabel
-            // 
-            this.FormLabel.AutoSize = true;
-            this.FormLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormLabel.Location = new System.Drawing.Point(12, 20);
-            this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(162, 13);
-            this.FormLabel.TabIndex = 3;
-            this.FormLabel.Text = "Test Form For ODBC Connection";
             // 
             // ExitButton
             // 
@@ -319,6 +311,19 @@
             this.SalesDataButton.UseVisualStyleBackColor = false;
             this.SalesDataButton.Click += new System.EventHandler(this.SalesDataButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // ModeSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,9 +351,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModeSelection";
             this.FormHeader.ResumeLayout(false);
-            this.FormHeader.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,7 +363,6 @@
 
         private System.Windows.Forms.Panel FormHeader;
         private System.Windows.Forms.Button MinimizeButton;
-        private System.Windows.Forms.Label FormLabel;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button6;
@@ -378,5 +382,6 @@
         private System.Windows.Forms.ListBox NoSaleListBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SalesDataButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

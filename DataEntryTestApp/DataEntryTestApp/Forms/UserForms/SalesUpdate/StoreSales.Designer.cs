@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StoreSales));
             this.StoreSelect = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.FormLabel = new System.Windows.Forms.Label();
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.FormHeader = new System.Windows.Forms.Panel();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.StoreListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FormHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // StoreSelect
@@ -68,16 +70,6 @@
             this.ExitButton.Text = "X";
             this.ExitButton.UseVisualStyleBackColor = true;
             // 
-            // FormLabel
-            // 
-            this.FormLabel.AutoSize = true;
-            this.FormLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.FormLabel.Location = new System.Drawing.Point(12, 20);
-            this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(162, 13);
-            this.FormLabel.TabIndex = 3;
-            this.FormLabel.Text = "Test Form For ODBC Connection";
-            // 
             // MinimizeButton
             // 
             this.MinimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -95,8 +87,8 @@
             // FormHeader
             // 
             this.FormHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FormHeader.Controls.Add(this.pictureBox1);
             this.FormHeader.Controls.Add(this.MinimizeButton);
-            this.FormHeader.Controls.Add(this.FormLabel);
             this.FormHeader.Controls.Add(this.ExitButton);
             this.FormHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.FormHeader.Location = new System.Drawing.Point(0, 0);
@@ -146,6 +138,19 @@
             this.ErrorLabel.Size = new System.Drawing.Size(0, 13);
             this.ErrorLabel.TabIndex = 37;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(166, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // StoreSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,7 +167,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StoreSales";
             this.FormHeader.ResumeLayout(false);
-            this.FormHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,12 +177,12 @@
 
         private System.Windows.Forms.Button StoreSelect;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.Label FormLabel;
         private System.Windows.Forms.Button MinimizeButton;
         private System.Windows.Forms.Panel FormHeader;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.ListBox StoreListBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -66,3 +66,4 @@ D:\Facultate\Second Year\Second Term\Software Engineering\Teamproject\Moni\ESP-S
 D:\Facultate\Second Year\Second Term\Software Engineering\Teamproject\Moni\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.exe
 D:\Facultate\Second Year\Second Term\Software Engineering\Teamproject\Moni\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.pdb
 D:\Facultate\Second Year\Second Term\Software Engineering\Teamproject\Moni\ESP-System\DataEntryTestApp\DataEntryTestApp\bin\Debug\MySql.Data.dll
+C:\Users\fille\Desktop\ESP-System\DataEntryTestApp\DataEntryTestApp\obj\Debug\DataEntryTestApp.StartForm.resources
