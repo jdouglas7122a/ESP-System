@@ -20,6 +20,8 @@ namespace DataEntryTestApp
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //change this to change the form that you want to create on start.
             Application.Run(new ModeSelection());
         }
     }
